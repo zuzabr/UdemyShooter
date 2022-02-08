@@ -1,0 +1,41 @@
+// Shooter Game All the Rights Reserved
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "RadialDamageActor.generated.h"
+
+UCLASS()
+class SHOOTER_API ARadialDamageActor : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	ARadialDamageActor();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+		USceneComponent* SceneComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float Radius = 300.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FColor SphereColor = FColor::Blue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float Damage = 0.1f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bDoFullDamage = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TSubclassOf<UDamageType> DamageType;
+
+protected:
+	virtual void BeginPlay() override;
+
+public:	
+	virtual void Tick(float DeltaTime) override;
+
+};

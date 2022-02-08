@@ -1,0 +1,5 @@
+Languge: Cpp
+BasedOnStyle: Microsoft
+UseTab: Never
+BreakBeforeBraces: Allman
+PointerAlignment: Left
