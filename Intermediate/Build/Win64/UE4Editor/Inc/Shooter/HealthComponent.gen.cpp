@@ -33,6 +33,13 @@ void EmptyLinkFunctionForGeneratedCodeHealthComponent() {}
 		P_THIS->OnTakeAnyDamageHAndle(Z_Param_DamagedActor,Z_Param_Damage,Z_Param_DamageType,Z_Param_InstigatedBy,Z_Param_DamageCauser);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UHealthComponent::execGetHealthPercent)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetHealthPercent();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UHealthComponent::execIsDead)
 	{
 		P_FINISH;
@@ -44,10 +51,44 @@ void EmptyLinkFunctionForGeneratedCodeHealthComponent() {}
 	{
 		UClass* Class = UHealthComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetHealthPercent", &UHealthComponent::execGetHealthPercent },
 			{ "IsDead", &UHealthComponent::execIsDead },
 			{ "OnTakeAnyDamageHAndle", &UHealthComponent::execOnTakeAnyDamageHAndle },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics
+	{
+		struct HealthComponent_eventGetHealthPercent_Parms
+		{
+			float ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(HealthComponent_eventGetHealthPercent_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "Public/Player/HealthComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHealthComponent, nullptr, "GetHealthPercent", nullptr, nullptr, sizeof(HealthComponent_eventGetHealthPercent_Parms), Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UHealthComponent_GetHealthPercent()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UHealthComponent_GetHealthPercent_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UHealthComponent_IsDead_Statics
 	{
@@ -73,6 +114,7 @@ void EmptyLinkFunctionForGeneratedCodeHealthComponent() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UHealthComponent_IsDead_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Health" },
 		{ "ModuleRelativePath", "Public/Player/HealthComponent.h" },
 	};
 #endif
@@ -183,7 +225,8 @@ void EmptyLinkFunctionForGeneratedCodeHealthComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UHealthComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHealthComponent_IsDead, "IsDead" }, // 587024350
+		{ &Z_Construct_UFunction_UHealthComponent_GetHealthPercent, "GetHealthPercent" }, // 2530011779
+		{ &Z_Construct_UFunction_UHealthComponent_IsDead, "IsDead" }, // 2538693902
 		{ &Z_Construct_UFunction_UHealthComponent_OnTakeAnyDamageHAndle, "OnTakeAnyDamageHAndle" }, // 3251870430
 	};
 #if WITH_METADATA
@@ -272,7 +315,7 @@ void EmptyLinkFunctionForGeneratedCodeHealthComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHealthComponent, 2404691103);
+	IMPLEMENT_CLASS(UHealthComponent, 2655023584);
 	template<> SHOOTER_API UClass* StaticClass<UHealthComponent>()
 	{
 		return UHealthComponent::StaticClass();

@@ -20,12 +20,14 @@ class AController;
 #define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
+	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 
 #define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
+	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 

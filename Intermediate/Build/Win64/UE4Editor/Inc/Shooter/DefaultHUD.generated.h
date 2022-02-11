@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SHOOTER_DefaultHUD_generated_h
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_SPARSE_DATA
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_RPC_WRAPPERS
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_INCLASS_NO_PURE_DECLS \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_SPARSE_DATA
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_RPC_WRAPPERS
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADefaultHUD(); \
 	friend struct Z_Construct_UClass_ADefaultHUD_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ADefaultHUD)
 
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_INCLASS \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesADefaultHUD(); \
 	friend struct Z_Construct_UClass_ADefaultHUD_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ADefaultHUD)
 
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_STANDARD_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ADefaultHUD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ADefaultHUD) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_ENHANCED_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ADefaultHUD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,28 +60,31 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ADefaultHUD)
 
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_PRIVATE_PROPERTY_OFFSET
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_12_PROLOG
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_GENERATED_BODY_LEGACY \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PlayerHUDWidgetClass() { return STRUCT_OFFSET(ADefaultHUD, PlayerHUDWidgetClass); }
+
+
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_10_PROLOG
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_RPC_WRAPPERS \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_INCLASS \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_STANDARD_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_RPC_WRAPPERS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_INCLASS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_GENERATED_BODY \
+#define Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_INCLASS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_15_ENHANCED_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_INCLASS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_UI_DefaultHUD_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

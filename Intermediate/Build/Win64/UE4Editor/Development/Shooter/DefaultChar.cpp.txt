@@ -30,8 +30,14 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter\CMC_Shooter.generated.h
 C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public\Player/HealthComponent.h
+C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public\ShooterCoreTypes.h
+C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter\ShooterCoreTypes.generated.h
 C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter\HealthComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
 C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public\Weapon/WeaponComponent.h
 C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter\WeaponComponent.generated.h

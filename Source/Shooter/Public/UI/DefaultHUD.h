@@ -6,9 +6,7 @@
 #include "GameFramework/HUD.h"
 #include "DefaultHUD.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class SHOOTER_API ADefaultHUD : public AHUD
 {
@@ -17,6 +15,13 @@ class SHOOTER_API ADefaultHUD : public AHUD
 public:
 
 	virtual void DrawHUD() override;
+
+protected:
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "UI")
+		TSubclassOf<UUserWidget> PlayerHUDWidgetClass;
+
+	virtual void BeginPlay() override;
 
 private:
 
