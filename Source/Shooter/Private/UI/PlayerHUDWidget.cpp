@@ -19,7 +19,7 @@ bool UPlayerHUDWidget::GetWeaponUIData(FWeaponUIData& UIData) const
 {
 	const auto WeaponComponent = ShooterUtils::GetPlayerComponent<UWeaponComponent>(GetOwningPlayerPawn());
 	if (!WeaponComponent) return false;
-	return WeaponComponent->GetWeaponUIData(UIData);
+	return WeaponComponent->GetCurrentWeaponUIData(UIData);
 }
 
 bool UPlayerHUDWidget::GetAmmoData(FAmmoData& AmmoData) const
@@ -27,7 +27,7 @@ bool UPlayerHUDWidget::GetAmmoData(FAmmoData& AmmoData) const
 	
 	const auto WeaponComponent = ShooterUtils::GetPlayerComponent<UWeaponComponent>(GetOwningPlayerPawn());
 	if (!WeaponComponent) return false;
-	return WeaponComponent->GetAmmoData(AmmoData);
+	return WeaponComponent->GetCurrentWeaponAmmoData(AmmoData);
 }
 
 bool UPlayerHUDWidget::IsPlayerAlive() const

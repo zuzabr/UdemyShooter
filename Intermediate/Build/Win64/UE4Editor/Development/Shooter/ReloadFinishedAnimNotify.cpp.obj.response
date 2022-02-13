@@ -282,7 +282,7 @@
 /FI"C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\ShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\ShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\ShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Private\Weapon\Animations\ReloadFinishedAnimNotify.cpp"
+"C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public\Weapon\Animations\ReloadFinishedAnimNotify.cpp"
 /FI"C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Development\Shooter\Definitions.Shooter.h"
 /Fo"C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Development\Shooter\ReloadFinishedAnimNotify.cpp.obj"
 /TP

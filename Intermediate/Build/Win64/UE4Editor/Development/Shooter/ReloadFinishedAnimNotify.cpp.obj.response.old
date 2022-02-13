@@ -232,10 +232,13 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter
+/I C:\MyWork\UnrealProjects\Shooter\Source
+/I ..\Plugins\FX\Niagara\Source\Niagara\Public
+/I C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public
 /I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UE4Editor\Inc\Niagara
 /I ..\Plugins\FX\Niagara\Source
 /I ..\Plugins\FX\Niagara\Source\Niagara\Classes
-/I ..\Plugins\FX\Niagara\Source\Niagara\Public
 /I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UE4Editor\Inc\NiagaraCore
 /I ..\Plugins\FX\Niagara\Source\NiagaraCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\VectorVM
@@ -247,9 +250,6 @@
 /I Runtime\Portal
 /I Runtime\Portal\LauncherPlatform\Public
 /I ..\Plugins\FX\Niagara\Source\NiagaraVertexFactories\Public
-/I C:\MyWork\UnrealProjects\Shooter\Intermediate\Build\Win64\UE4Editor\Inc\Shooter
-/I C:\MyWork\UnrealProjects\Shooter\Source
-/I C:\MyWork\UnrealProjects\Shooter\Source\Shooter\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf

@@ -87,7 +87,7 @@ void ARifleWeapon::MakeDamage(const FHitResult& HitResult)
 	const auto DamagedActor = HitResult.GetActor();
 	if (!DamagedActor) return;
 
-	DamagedActor->TakeDamage(Damage, FDamageEvent(), GetPlayerController(), this);
+	DamagedActor->TakeDamage(Damage, FDamageEvent(), GetController(), this);
 }
 
 void ARifleWeapon::InitMuzzleFX()
@@ -106,4 +106,10 @@ void ARifleWeapon::SetMuzzleFXVisibility(bool Visible)
 		MuzzleFXComponent->SetPaused(!Visible);
 		MuzzleFXComponent->SetVisibility(Visible, true);
 	}
+}
+
+AController* ARifleWeapon::GetController() const
+{
+	const auto Pawn = Cast<APawn>(GetOwner());
+	return Pawn ? Pawn->GetController() : nullptr;
 }

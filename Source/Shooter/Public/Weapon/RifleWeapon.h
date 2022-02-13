@@ -49,5 +49,6 @@ private:
 	void MakeDamage(const FHitResult& HitResult);
 	void InitMuzzleFX();
 	void SetMuzzleFXVisibility(bool Visible);
+	AController* GetController() const;
 
 };
