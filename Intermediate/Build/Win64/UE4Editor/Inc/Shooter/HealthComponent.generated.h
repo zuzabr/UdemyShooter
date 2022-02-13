@@ -16,20 +16,22 @@ class AController;
 #endif
 #define SHOOTER_HealthComponent_generated_h
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_SPARSE_DATA
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
+	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
+	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_INCLASS_NO_PURE_DECLS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHealthComponent(); \
 	friend struct Z_Construct_UClass_UHealthComponent_Statics; \
@@ -38,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UHealthComponent)
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_INCLASS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesUHealthComponent(); \
 	friend struct Z_Construct_UClass_UHealthComponent_Statics; \
@@ -47,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UHealthComponent)
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_STANDARD_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHealthComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UHealthComponent) \
@@ -60,7 +62,7 @@ private: \
 public:
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_ENHANCED_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UHealthComponent(UHealthComponent&&); \
@@ -71,35 +73,37 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UHealthComponent)
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_PRIVATE_PROPERTY_OFFSET \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(UHealthComponent, MaxHealth); } \
 	FORCEINLINE static uint32 __PPO__AutoHeal() { return STRUCT_OFFSET(UHealthComponent, AutoHeal); } \
 	FORCEINLINE static uint32 __PPO__HealUpdateTime() { return STRUCT_OFFSET(UHealthComponent, HealUpdateTime); } \
 	FORCEINLINE static uint32 __PPO__HealDelay() { return STRUCT_OFFSET(UHealthComponent, HealDelay); } \
-	FORCEINLINE static uint32 __PPO__HealModifier() { return STRUCT_OFFSET(UHealthComponent, HealModifier); }
+	FORCEINLINE static uint32 __PPO__HealModifier() { return STRUCT_OFFSET(UHealthComponent, HealModifier); } \
+	FORCEINLINE static uint32 __PPO__CameraShake() { return STRUCT_OFFSET(UHealthComponent, CameraShake); } \
+	FORCEINLINE static uint32 __PPO__DamageMontage() { return STRUCT_OFFSET(UHealthComponent, DamageMontage); }
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_13_PROLOG
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_GENERATED_BODY_LEGACY \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_14_PROLOG
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_INCLASS \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_STANDARD_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_GENERATED_BODY \
+#define Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_INCLASS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_Player_HealthComponent_h_16_ENHANCED_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_Player_HealthComponent_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

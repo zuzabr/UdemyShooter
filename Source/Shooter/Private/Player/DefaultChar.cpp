@@ -8,6 +8,7 @@
 #include "Player/CMC_Shooter.h"
 #include "Player/HealthComponent.h"
 #include "Components/TextRenderComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/Controller.h"
 #include "Weapon/WeaponComponent.h"
 
@@ -42,6 +43,7 @@ void ADefaultChar::BeginPlay()
 	check(HealthComponent);
 	check(HealthTextComponent);
 	check(GetCharacterMovement());
+	check(GetMesh());
 
 	OnHealthChanged(HealthComponent->GetHealth());
 	HealthComponent->OnDeath.AddUObject(this, &ADefaultChar::OnDeath); // Привязка функции на делегат
@@ -52,9 +54,6 @@ void ADefaultChar::BeginPlay()
 	
 }
 
-	
-
-
 
 void ADefaultChar::Tick(float DeltaTime)
 {
@@ -64,7 +63,6 @@ void ADefaultChar::Tick(float DeltaTime)
 	
 	
 }
-
 
 void ADefaultChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -80,7 +78,11 @@ void ADefaultChar::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ADefaultChar::Jump);
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ADefaultChar::SprintOn);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ADefaultChar::SprintOff);
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &UWeaponComponent::Fire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &UWeaponComponent::StartFire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &UWeaponComponent::StopFire);
+	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, WeaponComponent, &UWeaponComponent::NextWeapon);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &UWeaponComponent::Reload);
+	PlayerInputComponent->BindAction("Homework", IE_Pressed, this, &ADefaultChar::HomeWork);
 }
 
 bool ADefaultChar::IsSprinting() const
@@ -125,7 +127,8 @@ void ADefaultChar::OnDeath()
 {
 	UE_LOG(DefaultCharacterLog, Display, TEXT("Player is dead"));
 
-	PlayAnimMontage(DeathAnimMontage);
+	//PlayAnimMontage(DeathAnimMontage);
+
 
 	GetCharacterMovement()->DisableMovement();
 	SetLifeSpan(5.0f);
@@ -134,6 +137,13 @@ void ADefaultChar::OnDeath()
 	{
 		Controller->ChangeState(NAME_Spectating);
 	}
+
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	WeaponComponent->StopFire();
+
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetMesh()->SetSimulatePhysics(true);
 }
 
 void ADefaultChar::OnHealthChanged(float Health)
@@ -152,3 +162,9 @@ void ADefaultChar::OnGroundLanded(const FHitResult& Hit)
 	TakeDamage(FinalDamage, FDamageEvent{}, nullptr, nullptr);
 }
 
+void ADefaultChar::HomeWork()
+{
+	TArray<int32> Numbers{ 21,33,59,45,86 };
+	int32* Result = Numbers.FindByPredicate([](int32 Value) { return Value % 5 == 4; });
+	UE_LOG(DefaultCharacterLog, Display, TEXT("%i"), *Result)
+}

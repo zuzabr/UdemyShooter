@@ -8,7 +8,7 @@ void ADefaultHUD::DrawHUD()
 {
 	Super::DrawHUD();
 
-	DrawCrosshair();
+	//DrawCrosshair();
 }
 
 void ADefaultHUD::DrawCrosshair()
