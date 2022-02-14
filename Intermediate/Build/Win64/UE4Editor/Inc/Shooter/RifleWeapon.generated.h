@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SHOOTER_RifleWeapon_generated_h
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_SPARSE_DATA
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_RPC_WRAPPERS
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_INCLASS_NO_PURE_DECLS \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_SPARSE_DATA
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_RPC_WRAPPERS
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARifleWeapon(); \
 	friend struct Z_Construct_UClass_ARifleWeapon_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ARifleWeapon)
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_INCLASS \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesARifleWeapon(); \
 	friend struct Z_Construct_UClass_ARifleWeapon_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ARifleWeapon)
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_STANDARD_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ARifleWeapon(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARifleWeapon) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_ENHANCED_CONSTRUCTORS \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ARifleWeapon(ARifleWeapon&&); \
@@ -58,35 +58,37 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARifleWeapon)
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__FireRate() { return STRUCT_OFFSET(ARifleWeapon, FireRate); } \
 	FORCEINLINE static uint32 __PPO__BulletSpread() { return STRUCT_OFFSET(ARifleWeapon, BulletSpread); } \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ARifleWeapon, Damage); } \
+	FORCEINLINE static uint32 __PPO__TraceFX() { return STRUCT_OFFSET(ARifleWeapon, TraceFX); } \
+	FORCEINLINE static uint32 __PPO__TraceTargetName() { return STRUCT_OFFSET(ARifleWeapon, TraceTargetName); } \
 	FORCEINLINE static uint32 __PPO__WeaponFXComponent() { return STRUCT_OFFSET(ARifleWeapon, WeaponFXComponent); } \
 	FORCEINLINE static uint32 __PPO__MuzzleFXComponent() { return STRUCT_OFFSET(ARifleWeapon, MuzzleFXComponent); }
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_12_PROLOG
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_GENERATED_BODY_LEGACY \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_13_PROLOG
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_RPC_WRAPPERS \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_INCLASS \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_STANDARD_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_RPC_WRAPPERS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_INCLASS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_GENERATED_BODY \
+#define Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_PRIVATE_PROPERTY_OFFSET \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_SPARSE_DATA \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_INCLASS_NO_PURE_DECLS \
-	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_15_ENHANCED_CONSTRUCTORS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_PRIVATE_PROPERTY_OFFSET \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_SPARSE_DATA \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_INCLASS_NO_PURE_DECLS \
+	Shooter_Source_Shooter_Public_Weapon_RifleWeapon_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

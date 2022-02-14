@@ -6,10 +6,11 @@
 #include "Engine/World.h"
 #include "Weapon/Effects/WeaponFX.h"
 #include "NiagaraComponent.h"
+#include "NiagaraFunctionLibrary.h"
 
 ARifleWeapon::ARifleWeapon()
 {
-	
+
 	WeaponFXComponent = CreateDefaultSubobject<UWeaponFX>("WeaponFXComponent");
 }
 
@@ -47,25 +48,18 @@ void ARifleWeapon::MakeShot()
 		StopFire();
 		return;
 	}
-	
+
 	FHitResult HitResult;
 	MakeHit(HitResult, TraceStart, TraceEnd);
-
+	FVector TraceFXEnd = TraceEnd;
 
 	if (HitResult.bBlockingHit)
 	{
-		//DrawDebugLine(GetWorld(), GetFireWorldLocation(), HitResult.ImpactPoint, FColor::Green, false, 3.0f, 0, 3.0f);
-		//DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 10.0f, 24, FColor::Red, false, 5.0f);
-
+		TraceFXEnd = HitResult.ImpactPoint;
 		MakeDamage(HitResult);
-
 		WeaponFXComponent->PlayImpactFX(HitResult);
 	}
-	else
-	{
-		//DrawDebugLine(GetWorld(), GetFireWorldLocation(), TraceEnd, FColor::Green, false, 3.0f, 0, 3.0f);
-	}
-
+	SpawnTraceFX(GetFireWorldLocation(), TraceEnd);
 	DecreaseAmmo();
 }
 
@@ -112,4 +106,13 @@ AController* ARifleWeapon::GetController() const
 {
 	const auto Pawn = Cast<APawn>(GetOwner());
 	return Pawn ? Pawn->GetController() : nullptr;
+}
+
+void ARifleWeapon::SpawnTraceFX(const FVector& TraceStart, const FVector& TraceEnd)
+{
+	const auto TraceFXComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), TraceFX, TraceStart);
+	if (TraceFXComponent)
+	{
+		TraceFXComponent->SetNiagaraVariableVec3(TraceTargetName, TraceEnd);
+	}
 }
