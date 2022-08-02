@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Shooter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{AB2DEC3F-C8AB-4DCA-A1A1-224F561BAFB9}</UniqueIdentifier>
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Shooter.Target.cs">
       <Filter>Source</Filter>
@@ -16,7 +16,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9059D01A-BC5A-4BE4-B514-6A4B46EDD254}</UniqueIdentifier>
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Shooter">
-      <UniqueIdentifier>{084AAF88-D84F-42E2-ABCE-594E09D2DC7E}</UniqueIdentifier>
+      <UniqueIdentifier>{E89F5254-55D1-3544-A4A1-A8FB6FBB79B2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Shooter\Shooter.Build.cs">
       <Filter>Source\Shooter</Filter>
@@ -43,13 +43,13 @@
       <Filter>Source\Shooter</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Private">
-      <UniqueIdentifier>{8ADE4728-1093-4A0D-A889-2905B647E25F}</UniqueIdentifier>
+      <UniqueIdentifier>{E739247F-225E-38BE-884C-EA40045B93D9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\GM_Shooter.cpp">
       <Filter>Source\Shooter\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\PickUps">
-      <UniqueIdentifier>{A8768B9B-4318-4C8D-B3B8-3754B4033390}</UniqueIdentifier>
+      <UniqueIdentifier>{21C702F6-5C33-32A2-8808-C8B132D8F458}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\PickUps\AmmoPickUp.cpp">
       <Filter>Source\Shooter\Private\PickUps</Filter>
@@ -61,7 +61,7 @@
       <Filter>Source\Shooter\Private\PickUps</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Player">
-      <UniqueIdentifier>{F0D69211-2D20-46EC-AF34-1A642BD5D1CC}</UniqueIdentifier>
+      <UniqueIdentifier>{37DA676F-3534-3900-A5CB-7BB020A10A40}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\Player\CMC_Shooter.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
@@ -76,7 +76,7 @@
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\UI">
-      <UniqueIdentifier>{2C9A00C7-25D4-46CF-812C-583234FB2EB3}</UniqueIdentifier>
+      <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\DefaultHUD.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
@@ -85,7 +85,7 @@
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon">
-      <UniqueIdentifier>{2A2A3F50-7A14-4F1C-B554-C2A65554FA85}</UniqueIdentifier>
+      <UniqueIdentifier>{84C832EE-7572-33F6-959B-207DDF7B358B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\BaseWeapon.cpp">
       <Filter>Source\Shooter\Private\Weapon</Filter>
@@ -112,19 +112,19 @@
       <Filter>Source\Shooter\Private\Weapon</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon\Animations">
-      <UniqueIdentifier>{DD8A132A-748E-4B5A-B813-C54541CE4E0C}</UniqueIdentifier>
+      <UniqueIdentifier>{CD14DC44-E9E4-33DE-9759-36042CFF1226}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\Animations\DefaultAnimNotify.cpp">
       <Filter>Source\Shooter\Private\Weapon\Animations</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon\Effects">
-      <UniqueIdentifier>{F50278D0-EA12-49EA-9FB2-965116342063}</UniqueIdentifier>
+      <UniqueIdentifier>{C96E02ED-F63B-31FB-8DA8-5BD43D43A501}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\Effects\WeaponFX.cpp">
       <Filter>Source\Shooter\Private\Weapon\Effects</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Public">
-      <UniqueIdentifier>{739E7A48-168E-4265-BD59-548ECAE80864}</UniqueIdentifier>
+      <UniqueIdentifier>{33A9E0AA-DBE0-3191-9D2D-6DB4A98D9D6E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\GM_Shooter.h">
       <Filter>Source\Shooter\Public</Filter>
@@ -136,7 +136,7 @@
       <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\PickUps">
-      <UniqueIdentifier>{BAFDC57B-7A25-4DD8-855A-4B4AB6231DE3}</UniqueIdentifier>
+      <UniqueIdentifier>{ED50AF48-D8F7-3B14-912B-54BDE3269997}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\PickUps\AmmoPickUp.h">
       <Filter>Source\Shooter\Public\PickUps</Filter>
@@ -148,7 +148,7 @@
       <Filter>Source\Shooter\Public\PickUps</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Player">
-      <UniqueIdentifier>{A9DA6766-A883-42CB-BCA5-7438D13544E8}</UniqueIdentifier>
+      <UniqueIdentifier>{4918A0D8-611B-3F7D-9A24-C43143BCEC92}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\Player\CMC_Shooter.h">
       <Filter>Source\Shooter\Public\Player</Filter>
@@ -163,7 +163,7 @@
       <Filter>Source\Shooter\Public\Player</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\UI">
-      <UniqueIdentifier>{0F632879-A6D2-4E3C-AF2E-E0CB4DC14E77}</UniqueIdentifier>
+      <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\DefaultHUD.h">
       <Filter>Source\Shooter\Public\UI</Filter>
@@ -172,7 +172,7 @@
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon">
-      <UniqueIdentifier>{99E2F4B4-E912-4F53-ABA7-83C910991EE0}</UniqueIdentifier>
+      <UniqueIdentifier>{C39401A1-4E71-38F6-B8CD-E66AEC5C0689}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\BaseWeapon.h">
       <Filter>Source\Shooter\Public\Weapon</Filter>
@@ -199,35 +199,31 @@
       <Filter>Source\Shooter\Public\Weapon</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon\Animations">
-      <UniqueIdentifier>{1002A3BA-A4B7-4467-A586-B0F66B95E60D}</UniqueIdentifier>
+      <UniqueIdentifier>{24C37F94-0389-379B-9367-9705349E03AB}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\AnimUtils.h">
+      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\DefaultAnimNotify.h">
       <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Shooter\Public\Weapon\Animations\EquipFinishedAnimNotify.cpp">
+      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\EquipFinishedAnimNotify.h">
+      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Shooter\Public\Weapon\Animations\ReloadFinishedAnimNotify.cpp">
+      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\ReloadFinishedAnimNotify.h">
+      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
+    </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon\Effects">
-      <UniqueIdentifier>{4975C8A6-6C26-402C-AAB8-314B0329BBF0}</UniqueIdentifier>
+      <UniqueIdentifier>{CE44A6B0-C2F5-32C1-81CE-BC263A4E7F67}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Effects\WeaponFX.h">
       <Filter>Source\Shooter\Public\Weapon\Effects</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\AnimUtils.h">
-      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\EquipFinishedAnimNotify.h">
-      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Animations\ReloadFinishedAnimNotify.h">
-      <Filter>Source\Shooter\Public\Weapon\Animations</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Shooter\Public\Weapon\Animations\EquipFinishedAnimNotify.cpp">
-      <Filter>Source\Shooter\Private\Weapon\Animations</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Shooter\Public\Weapon\Animations\ReloadFinishedAnimNotify.cpp">
-      <Filter>Source\Shooter\Private\Weapon\Animations</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
