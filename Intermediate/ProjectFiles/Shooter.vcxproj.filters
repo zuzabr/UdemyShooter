@@ -30,6 +30,12 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\Shooter">
       <UniqueIdentifier>{E89F5254-55D1-3544-A4A1-A8FB6FBB79B2}</UniqueIdentifier>
     </Filter>
@@ -47,6 +53,27 @@
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\GM_Shooter.cpp">
       <Filter>Source\Shooter\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI">
+      <UniqueIdentifier>{A09CDA1E-10FB-380B-939B-B874B570B042}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\FindEnemyService.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\FireService.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\NextLocationTask.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\NPCChar.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\NPCController.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\NPCPerceptionComponent.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\PickUps">
       <UniqueIdentifier>{21C702F6-5C33-32A2-8808-C8B132D8F458}</UniqueIdentifier>
@@ -99,6 +126,9 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\LauncherWeapon.cpp">
       <Filter>Source\Shooter\Private\Weapon</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\NPCWeaponComponent.cpp">
+      <Filter>Source\Shooter\Private\Weapon</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\RadialDamageActor.cpp">
       <Filter>Source\Shooter\Private\Weapon</Filter>
     </ClCompile>
@@ -134,6 +164,27 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\ShooterUtils.h">
       <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI">
+      <UniqueIdentifier>{47274490-2D43-3A40-B0FA-4891401FCBEB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\FindEnemyService.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\FireService.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\NextLocationTask.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\NPCChar.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\NPCController.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\NPCPerceptionComponent.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\PickUps">
       <UniqueIdentifier>{ED50AF48-D8F7-3B14-912B-54BDE3269997}</UniqueIdentifier>
@@ -184,6 +235,9 @@
       <Filter>Source\Shooter\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\LauncherWeapon.h">
+      <Filter>Source\Shooter\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\NPCWeaponComponent.h">
       <Filter>Source\Shooter\Public\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\RadialDamageActor.h">

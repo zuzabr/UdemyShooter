@@ -62,6 +62,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 		float GetMovementDirection() const;
 
+	UHealthComponent* GetHealth(APawn* PlayerPawn) const;
+
 private:
 
 	bool bRun = false;
