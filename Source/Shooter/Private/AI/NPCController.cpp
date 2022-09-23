@@ -5,12 +5,16 @@
 #include "AI/NPCChar.h"
 #include "AI/NPCPerceptionComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Player/RespawnComponent.h"
 
 ANPCController::ANPCController()
 {
 	NPCPerceptionComponent = CreateDefaultSubobject<UNPCPerceptionComponent>("NPCPerceptionComponent");
 	SetPerceptionComponent(*NPCPerceptionComponent);
 
+	RespawnComponent = CreateDefaultSubobject<URespawnComponent>("RespawnComponent");
+	
+	
 	bWantsPlayerState = true;
 }
 

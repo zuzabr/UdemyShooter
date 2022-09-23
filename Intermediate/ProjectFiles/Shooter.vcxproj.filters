@@ -30,12 +30,6 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
-    <Filter Include="Config\HoloLens">
-      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
-      <Filter>Config\HoloLens</Filter>
-    </None>
     <Filter Include="Source\Shooter">
       <UniqueIdentifier>{E89F5254-55D1-3544-A4A1-A8FB6FBB79B2}</UniqueIdentifier>
     </Filter>
@@ -117,10 +111,19 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Player\PlayerControllerShooter.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\RespawnComponent.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\ShooterPlayerState.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\UI">
       <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\DefaultHUD.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\GameDataWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\PlayerHUDWidget.cpp">
@@ -243,10 +246,19 @@
     <ClInclude Include="..\..\Source\Shooter\Public\Player\PlayerControllerShooter.h">
       <Filter>Source\Shooter\Public\Player</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\RespawnComponent.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\ShooterPlayerState.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
     <Filter Include="Source\Shooter\Public\UI">
       <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\DefaultHUD.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\GameDataWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\PlayerHUDWidget.h">

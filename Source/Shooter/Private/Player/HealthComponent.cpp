@@ -10,6 +10,7 @@
 #include "Camera/CameraShakeBase.h"
 #include "GameFramework/Character.h"
 #include "Animation/AnimMontage.h"
+#include "GM_Shooter.h"
 
 
 DEFINE_LOG_CATEGORY_STATIC(HealthComponent, All, All);
@@ -47,6 +48,7 @@ void UHealthComponent::OnTakeAnyDamageHAndle(AActor* DamagedActor, float Damage,
 
 	if (IsDead())
 	{
+		Killed(InstigatedBy);
 		OnDeath.Broadcast();
 	}
 	else if (AutoHeal)
@@ -121,4 +123,16 @@ void UHealthComponent::PlayCameraShake()
 	if (!Controller || !Controller->PlayerCameraManager) return;
 
 	Controller->PlayerCameraManager->StartCameraShake(CameraShake);
+}
+
+void UHealthComponent::Killed(AController* KillerController)
+{
+	if (!GetWorld()) return;
+	const auto GameMode = Cast<AGM_Shooter>(GetWorld()->GetAuthGameMode());
+	if (!GameMode) return;
+
+	const auto Player = Cast<APawn>(GetOwner());
+	const auto VictimController = Player ? Player->Controller : nullptr;
+
+	GameMode->Killed(KillerController, VictimController);
 }

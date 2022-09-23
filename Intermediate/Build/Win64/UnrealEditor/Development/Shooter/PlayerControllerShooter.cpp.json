@@ -7,7 +7,9 @@
         "Includes": [
             "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
             "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\player\\playercontrollershooter.h",
-            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\playercontrollershooter.generated.h"
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\playercontrollershooter.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\player\\respawncomponent.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\respawncomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

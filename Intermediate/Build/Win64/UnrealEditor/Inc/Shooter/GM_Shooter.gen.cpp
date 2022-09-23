@@ -80,7 +80,7 @@ void EmptyLinkFunctionForGeneratedCodeGM_Shooter() {}
 		{ "ModuleRelativePath", "Public/GM_Shooter.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData = { "GameData", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGM_Shooter, GameData), Z_Construct_UScriptStruct_FGameData, METADATA_PARAMS(Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData_MetaData)) }; // 2210509837
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData = { "GameData", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGM_Shooter, GameData), Z_Construct_UScriptStruct_FGameData, METADATA_PARAMS(Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGM_Shooter_Statics::NewProp_GameData_MetaData)) }; // 1238543316
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGM_Shooter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGM_Shooter_Statics::NewProp_AIControllerClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGM_Shooter_Statics::NewProp_AIPawnClass,
@@ -122,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeGM_Shooter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_GM_Shooter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGM_Shooter, AGM_Shooter::StaticClass, TEXT("AGM_Shooter"), &Z_Registration_Info_UClass_AGM_Shooter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGM_Shooter), 2832209757U) },
+		{ Z_Construct_UClass_AGM_Shooter, AGM_Shooter::StaticClass, TEXT("AGM_Shooter"), &Z_Registration_Info_UClass_AGM_Shooter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGM_Shooter), 1672071270U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_GM_Shooter_h_4276875413(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_GM_Shooter_h_4266345770(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_GM_Shooter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_GM_Shooter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

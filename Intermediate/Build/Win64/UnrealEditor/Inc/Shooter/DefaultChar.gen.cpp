@@ -209,6 +209,10 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_LandedDamage_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_LandedDamage;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaterialColorName_MetaData[];
+#endif
+		static const UECodeGen_Private::FNamePropertyParams NewProp_MaterialColorName;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -291,6 +295,13 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamage = { "LandedDamage", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, LandedDamage), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamage_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName_MetaData[] = {
+		{ "Category", "Material" },
+		{ "ModuleRelativePath", "Public/Player/DefaultChar.h" },
+	};
+#endif
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName = { "MaterialColorName", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, MaterialColorName), METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADefaultChar_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent,
@@ -300,6 +311,7 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_DeathAnimMontage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamageVelocity,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ADefaultChar_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ADefaultChar>::IsAbstract,
@@ -337,9 +349,9 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ADefaultChar, ADefaultChar::StaticClass, TEXT("ADefaultChar"), &Z_Registration_Info_UClass_ADefaultChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADefaultChar), 2964662112U) },
+		{ Z_Construct_UClass_ADefaultChar, ADefaultChar::StaticClass, TEXT("ADefaultChar"), &Z_Registration_Info_UClass_ADefaultChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADefaultChar), 444826745U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_2920216714(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_1517368549(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

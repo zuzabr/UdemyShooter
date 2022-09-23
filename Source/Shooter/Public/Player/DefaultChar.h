@@ -21,6 +21,8 @@ class SHOOTER_API ADefaultChar : public ACharacter // класс проект_API А - актор
 public:
 	ADefaultChar(const FObjectInitializer& ObjectInit);
 
+
+
 protected:
 	
 	virtual void BeginPlay() override;
@@ -50,6 +52,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Movement")
 		FVector2D LandedDamage = FVector2D(10.0f, 100.0f);
 
+	UPROPERTY(EditDefaultsOnly, Category = "Material")
+		FName MaterialColorName = "BodyColor";
 	
 
 public:	
@@ -65,6 +69,8 @@ public:
 
 	UHealthComponent* GetHealth(APawn* PlayerPawn) const;
 
+	void SetPlayerColor(const FLinearColor& Color);
+
 private:
 
 	bool bRun = false;
@@ -78,7 +84,7 @@ private:
 
 	
 	void OnHealthChanged(float Health);
-	void HomeWork();
+	
 
 	UFUNCTION()
 		void OnGroundLanded(const FHitResult& Hit);

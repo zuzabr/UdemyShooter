@@ -6,14 +6,19 @@
 #include "Player/PlayerControllerShooter.h"
 #include "UI/DefaultHUD.h"
 #include "AIController.h"
+#include "Player/ShooterPlayerState.h"
+#include "ShooterUtils.h"
+#include "Player/RespawnComponent.h"
 
 
+constexpr static int32 MinRoundTimeForRespawn = 10;
 
 AGM_Shooter::AGM_Shooter() 
 {
 	DefaultPawnClass = ADefaultChar::StaticClass();
 	PlayerControllerClass = APlayerControllerShooter::StaticClass();
 	HUDClass = ADefaultHUD::StaticClass();
+	PlayerStateClass = AShooterPlayerState::StaticClass();
 }
 
 void AGM_Shooter::StartPlay()
@@ -21,7 +26,7 @@ void AGM_Shooter::StartPlay()
 	Super::StartPlay();
 
 	SpawnBots();
-
+	CreateTeamsInfo();
 	CurrentRound = 1;
 	StartRound();
 }
@@ -71,6 +76,7 @@ void AGM_Shooter::GameTimerUpdate()
 		else
 		{
 			UE_LOG(LogTemp, Display, TEXT("------------------Game Over--------------"));
+			LogPlayerInfo();
 		}
 	}
 }
@@ -92,4 +98,100 @@ void AGM_Shooter::ResetOnePlayer(AController* Controller)
 		Controller->GetPawn()->Reset();
 	}
 	RestartPlayer(Controller);
+	SetPlayerColor(Controller);
+}
+
+void AGM_Shooter::CreateTeamsInfo()
+{
+	if (!GetWorld()) return;
+
+	int32 TeamID = 1;
+	for (auto It = GetWorld()->GetControllerIterator(); It; ++It)
+	{
+		const auto Controller = It->Get();
+		if (!Controller) continue;
+
+		const auto PlayerState = Cast<AShooterPlayerState>(Controller->PlayerState);
+		if (!PlayerState) continue;
+
+		PlayerState->SetTeamID(TeamID);
+		PlayerState->SetTeamColor(DetermineColorByTeamID(TeamID));
+		SetPlayerColor(Controller);
+		TeamID = TeamID == 1 ? 2 : 1;
+
+	}
+
+}
+
+FLinearColor AGM_Shooter::DetermineColorByTeamID(int32 TeamID) const
+{
+	if (TeamID - 1 < GameData.TeamColors.Num())
+	{
+		return GameData.TeamColors[TeamID - 1];
+	}
+
+	return GameData.DefaultTeamColor;
+}
+
+void AGM_Shooter::SetPlayerColor(AController* Controller)
+{
+	if (!Controller) return;
+	const auto Character = Cast<ADefaultChar>(Controller->GetPawn());
+	if (!Character) return;
+
+	const auto PlayerState = Cast<AShooterPlayerState>(Controller->PlayerState);
+	if (!PlayerState) return;
+
+	Character->SetPlayerColor(PlayerState->GetTeamColor());
+}
+
+void AGM_Shooter::Killed(AController* KillerController, AController* VictimController)
+{
+	const auto KillerPlayerState = KillerController ? Cast<AShooterPlayerState>(KillerController->PlayerState) : nullptr;
+	const auto VictimPlayerState = VictimController ? Cast<AShooterPlayerState>(VictimController->PlayerState) : nullptr;
+
+	if (KillerPlayerState)
+	{
+		KillerPlayerState->AddKill();
+	}
+
+	if (VictimPlayerState)
+	{
+		VictimPlayerState->AddDeath();
+	}
+
+	StartRespawn(VictimController);
+}
+
+void AGM_Shooter::LogPlayerInfo()
+{
+	if (!GetWorld()) return;
+
+	int32 TeamID = 1;
+	for (auto It = GetWorld()->GetControllerIterator(); It; ++It)
+	{
+		const auto Controller = It->Get();
+		if (!Controller) continue;
+
+		const auto PlayerState = Cast<AShooterPlayerState>(Controller->PlayerState);
+		if (!PlayerState) continue;
+
+		PlayerState->LogInfo();
+	}
+
+}
+
+void AGM_Shooter::StartRespawn(AController* Controller)
+{
+	const auto RespawnAvailable = RoundCountDown > MinRoundTimeForRespawn + GameData.RespawnTime;
+	if (!RespawnAvailable) return;
+	const auto RespawnComp = ShooterUtils::GetPlayerComponent<URespawnComponent>(Controller);
+	if (!RespawnComp) return;
+
+	RespawnComp->Respawn(GameData.RespawnTime);
+}
+
+void AGM_Shooter::RespawnRequest(AController* Controller)
+{
+	ResetOnePlayer(Controller);
 }

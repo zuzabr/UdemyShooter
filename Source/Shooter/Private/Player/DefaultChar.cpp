@@ -82,7 +82,7 @@ void ADefaultChar::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &UWeaponComponent::StopFire);
 	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, WeaponComponent, &UWeaponComponent::NextWeapon);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &UWeaponComponent::Reload);
-	PlayerInputComponent->BindAction("Homework", IE_Pressed, this, &ADefaultChar::HomeWork);
+	
 }
 
 bool ADefaultChar::IsSprinting() const
@@ -170,9 +170,12 @@ void ADefaultChar::OnGroundLanded(const FHitResult& Hit)
 	TakeDamage(FinalDamage, FDamageEvent{}, nullptr, nullptr);
 }
 
-void ADefaultChar::HomeWork()
+
+
+void ADefaultChar::SetPlayerColor(const FLinearColor& Color)
 {
-	TArray<int32> Numbers{ 21,33,59,45,86 };
-	int32* Result = Numbers.FindByPredicate([](int32 Value) { return Value % 5 == 4; });
-	UE_LOG(DefaultCharacterLog, Display, TEXT("%i"), *Result)
+	const auto MaterialInst = GetMesh()->CreateAndSetMaterialInstanceDynamic(0);
+	if (!MaterialInst) return;
+
+	MaterialInst->SetVectorParameterValue(MaterialColorName, Color);
 }

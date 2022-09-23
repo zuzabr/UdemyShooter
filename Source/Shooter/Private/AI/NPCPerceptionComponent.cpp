@@ -6,6 +6,8 @@
 #include "Player/HealthComponent.h"
 #include"Perception/AISense_Sight.h"
 #include "Player/DefaultChar.h"
+#include "ShooterUtils.h"
+
 
 AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 {
@@ -27,12 +29,12 @@ AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 
 	for (const auto  PercieveActor : PercieveActors)
 	{
-		const auto Enemy = Cast<ADefaultChar>(PercieveActor);
-		if (Enemy)
-		{
-			
-			const auto HealthComponent = Enemy->GetHealth(Enemy);
-			if (HealthComponent && !(HealthComponent->IsDead()))
+		
+		const auto HealthComponent = ShooterUtils::GetPlayerComponent<UHealthComponent>(PercieveActor);
+		const auto PercievePawn = Cast<APawn>(PercieveActor);
+		const auto AreEnemies = PercievePawn && ShooterUtils::AreEnemies(Controller, PercievePawn->Controller);
+
+			if (HealthComponent && !(HealthComponent->IsDead()) && AreEnemies)
 			{
 				
 				const auto CurrentDistanse = (PercieveActor->GetActorLocation() - ThisPawn->GetActorLocation()).Size();
@@ -43,7 +45,7 @@ AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 					
 				}
 			}
-		}
+		
 	}
 
 	return BestPawn;

@@ -2,4 +2,9 @@
 
 
 #include "Player/PlayerControllerShooter.h"
+#include "Player/RespawnComponent.h"
 
+APlayerControllerShooter::APlayerControllerShooter()
+{
+	RespawnComponent = CreateDefaultSubobject<URespawnComponent>("RespawnComponent");
+}
