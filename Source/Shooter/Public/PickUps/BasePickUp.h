@@ -17,6 +17,7 @@ public:
 	
 	ABasePickUp();
 	virtual void Tick(float DeltaTime) override;
+	bool CouldBeTaken() const;
 
 protected:
 
@@ -26,6 +27,8 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PickupInfo")
 		float RespawnTime = 5.0f;
+
+	
 //------------------------Variables------------------------	
 
 
@@ -38,6 +41,7 @@ private:
 
 //------------------------Variables------------------------	
 	float RotationYaw = 0.0f;
+	FTimerHandle RespawnTimerHandle;
 //------------------------Variables------------------------	
 
 

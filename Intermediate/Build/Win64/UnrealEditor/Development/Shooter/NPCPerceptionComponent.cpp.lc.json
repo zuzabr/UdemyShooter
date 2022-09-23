@@ -1,0 +1,42 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\private\\ai\\npcperceptioncomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\ai\\npcperceptioncomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptioncomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\genericteamagentinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptiontypes.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navfilters\\navigationqueryfilter.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navareas\\navarea.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navareabase.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\navareabase.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\navigationsystem\\navarea.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\navigationsystem\\navigationqueryfilter.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigationsystemconfig.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\navigationsystemconfig.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aitypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aiperceptiontypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aisense.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisense.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionsystem.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\aisubsystem.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\aisystem.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\aisystembase.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\aisystembase.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisystem.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisubsystem.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aiperceptionsystem.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aiperceptioncomponent.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\npcperceptioncomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

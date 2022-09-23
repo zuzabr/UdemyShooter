@@ -100,6 +100,14 @@ float ADefaultChar::GetMovementDirection() const
 	return  CrossProduct.IsZero() ? Degrees : Degrees * FMath::Sign(CrossProduct.Z);
 }
 
+UHealthComponent* ADefaultChar::GetHealth(APawn* PlayerPawn) const
+{
+	if (!PlayerPawn) return nullptr;
+	const auto Component = HealthComponent;
+	return Component;
+	
+}
+
 void ADefaultChar::MoveForward(float Scale)
 {
 	if (Scale == 0.0f) return;

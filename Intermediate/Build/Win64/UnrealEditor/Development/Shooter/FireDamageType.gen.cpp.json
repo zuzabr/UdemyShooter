@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\firedamagetype.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\weapon\\firedamagetype.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\firedamagetype.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

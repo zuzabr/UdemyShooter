@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\MyWork\\UnrealProjects\\Shooter\\Source\\Shooter\\Shooter.Build.cs",
-		"C:\\MyWork\\UnrealProjects\\Shooter\\Source\\Shooter.Target.cs",
-		"C:\\MyWork\\UnrealProjects\\Shooter\\Source\\ShooterEditor.Target.cs"
+		"C:\\MyWork\\UnrealProjects\\Shooter 5.0\\Source\\Shooter\\Shooter.Build.cs",
+		"C:\\MyWork\\UnrealProjects\\Shooter 5.0\\Source\\Shooter.Target.cs",
+		"C:\\MyWork\\UnrealProjects\\Shooter 5.0\\Source\\ShooterEditor.Target.cs"
 	],
-	"EngineVersion": "4.27.2"
+	"EngineVersion": "5.0.0"
 }

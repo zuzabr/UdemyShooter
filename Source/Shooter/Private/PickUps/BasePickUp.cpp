@@ -36,6 +36,8 @@ void ABasePickUp::Tick(float DeltaTime)
 
 }
 
+
+
 void ABasePickUp::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
@@ -57,7 +59,7 @@ void ABasePickUp::PickUpWasTaken()
 		GetRootComponent()->SetVisibility(false, true);
 	}
 
-	FTimerHandle RespawnTimerHandle;
+	
 	GetWorldTimerManager().SetTimer(RespawnTimerHandle, this, &ABasePickUp::Respawn, RespawnTime);
 }
 
@@ -80,4 +82,11 @@ void ABasePickUp::GenerateRotationYaw()
 {
 	const auto Direction = FMath::RandBool() ? 1.0f : -1.0f;
 	RotationYaw = FMath::RandRange(1.0f, 3.0f) * Direction;
+}
+
+bool ABasePickUp::CouldBeTaken() const
+{
+
+	return !GetWorldTimerManager().IsTimerActive(RespawnTimerHandle);
+
 }

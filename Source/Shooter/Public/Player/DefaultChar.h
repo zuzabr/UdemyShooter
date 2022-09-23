@@ -24,6 +24,7 @@ public:
 protected:
 	
 	virtual void BeginPlay() override;
+	virtual void OnDeath();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UCameraComponent* CameraComponent;
@@ -62,6 +63,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 		float GetMovementDirection() const;
 
+	UHealthComponent* GetHealth(APawn* PlayerPawn) const;
+
 private:
 
 	bool bRun = false;
@@ -73,7 +76,7 @@ private:
 	void SprintOn();
 	void SprintOff();
 
-	void OnDeath();
+	
 	void OnHealthChanged(float Health);
 	void HomeWork();
 

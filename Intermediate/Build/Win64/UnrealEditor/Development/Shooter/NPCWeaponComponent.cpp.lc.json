@@ -1,0 +1,19 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\private\\weapon\\npcweaponcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\weapon\\npcweaponcomponent.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\weapon\\weaponcomponent.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\shootercoretypes.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shootercoretypes.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\weaponcomponent.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\npcweaponcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

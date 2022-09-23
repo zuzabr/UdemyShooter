@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\ammopickup.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\pickups\\ammopickup.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\pickups\\basepickup.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\basepickup.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\ammopickup.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -48,12 +48,13 @@ void ABaseWeapon::MakeShot() {}
 
 bool ABaseWeapon::GetPlayerViewPoint(FVector& ViewLocation, FRotator& ViewRotation) const
 {
-    const auto STUCharacter = Cast<ACharacter>(GetOwner());
-    if (!STUCharacter) return false;
+   
+    const auto Character = Cast<ACharacter>(GetOwner());
+    if (!Character) return false;
 
-    if (STUCharacter->IsPlayerControlled())
+    if (Character->IsPlayerControlled())
     {
-        const auto Controller = STUCharacter->GetController<APlayerController>();
+        const auto Controller = Character->GetController<APlayerController>();
         if (!Controller) return false;
 
         Controller->GetPlayerViewPoint(ViewLocation, ViewRotation);

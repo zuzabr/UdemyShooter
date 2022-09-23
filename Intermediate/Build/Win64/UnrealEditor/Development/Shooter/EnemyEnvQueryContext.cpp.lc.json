@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\private\\ai\\enemyenvquerycontext.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\ai\\enemyenvquerycontext.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\environmentquery\\envquerycontext.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\envquerycontext.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\enemyenvquerycontext.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

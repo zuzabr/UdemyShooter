@@ -1,0 +1,22 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\private\\pickups\\healthpickup.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\pickups\\healthpickup.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\pickups\\basepickup.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\basepickup.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\healthpickup.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\player\\healthcomponent.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\shootercoretypes.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shootercoretypes.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\healthcomponent.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\shooterutils.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
