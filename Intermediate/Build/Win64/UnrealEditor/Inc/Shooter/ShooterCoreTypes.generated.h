@@ -48,6 +48,13 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<struct FImpactlData>();
 
 template<> SHOOTER_API UScriptStruct* StaticStruct<struct FWeaponUIData>();
 
+#define FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_102_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FGameData_Statics; \
+	SHOOTER_API static class UScriptStruct* StaticStruct();
+
+
+template<> SHOOTER_API UScriptStruct* StaticStruct<struct FGameData>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h
 

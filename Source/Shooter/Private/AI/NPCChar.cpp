@@ -9,7 +9,7 @@
 ANPCChar::ANPCChar(const FObjectInitializer& ObjInit)
 	:Super(ObjInit.SetDefaultSubobjectClass<UNPCWeaponComponent>("WeaponComponent"))
 {
-	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+	AutoPossessAI = EAutoPossessAI::Disabled;
 	AIControllerClass = ANPCController::StaticClass();
 }
 

@@ -94,3 +94,21 @@ struct FWeaponUIData
 
 };
 //---------------------Widgets---------------------
+
+//--------------------GameMode---------------------
+USTRUCT(BlueprintType)
+struct FGameData
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1", ClampMax = "100"))
+		int32 PlayersNum = 2;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1", ClampMax = "100"))
+		int32 RoundNum = 4;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "3", ClampMax = "100"))
+		int32 RoundTime = 10; //In Seconds
+
+};
+//--------------------GameMode---------------------

@@ -10,6 +10,8 @@ ANPCController::ANPCController()
 {
 	NPCPerceptionComponent = CreateDefaultSubobject<UNPCPerceptionComponent>("NPCPerceptionComponent");
 	SetPerceptionComponent(*NPCPerceptionComponent);
+
+	bWantsPlayerState = true;
 }
 
 void ANPCController::OnPossess(APawn* InPawn)
