@@ -24,6 +24,7 @@ public:
 protected:
 	
 	virtual void BeginPlay() override;
+	virtual void OnDeath();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UCameraComponent* CameraComponent;
@@ -75,7 +76,7 @@ private:
 	void SprintOn();
 	void SprintOff();
 
-	void OnDeath();
+	
 	void OnHealthChanged(float Health);
 	void HomeWork();
 

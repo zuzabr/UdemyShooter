@@ -57,10 +57,25 @@
     <Filter Include="Source\Shooter\Private\AI">
       <UniqueIdentifier>{A09CDA1E-10FB-380B-939B-B874B570B042}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\AmmoAmountDecorator.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\ChangeWeaponService.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\EnemyEnvQueryContext.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\EnvQueryTest_CanPickUp.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\AI\FindEnemyService.cpp">
       <Filter>Source\Shooter\Private\AI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\AI\FireService.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\HealthAmountDecorator.cpp">
       <Filter>Source\Shooter\Private\AI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\AI\NextLocationTask.cpp">
@@ -168,10 +183,25 @@
     <Filter Include="Source\Shooter\Public\AI">
       <UniqueIdentifier>{47274490-2D43-3A40-B0FA-4891401FCBEB}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\AmmoAmountDecorator.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\ChangeWeaponService.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\EnemyEnvQueryContext.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\EnvQueryTest_CanPickUp.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\AI\FindEnemyService.h">
       <Filter>Source\Shooter\Public\AI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\AI\FireService.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\HealthAmountDecorator.h">
       <Filter>Source\Shooter\Public\AI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\AI\NextLocationTask.h">

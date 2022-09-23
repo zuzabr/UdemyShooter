@@ -10,9 +10,9 @@
 float UPlayerHUDWidget::GetHealthPercent() const
 {
 	
-	const auto HealthComponent = ShooterUtils::GetPlayerComponent<UHealthComponent>(GetOwningPlayerPawn());
-	if (!HealthComponent) return 0.0;
-	return HealthComponent->GetHealthPercent();
+	const auto HealthComp = ShooterUtils::GetPlayerComponent<UHealthComponent>(GetOwningPlayerPawn());
+	if (!HealthComp) return 0.0;
+	return HealthComp->GetHealthPercent();
 }
 
 bool UPlayerHUDWidget::GetWeaponUIData(FWeaponUIData& UIData) const
@@ -32,8 +32,8 @@ bool UPlayerHUDWidget::GetAmmoData(FAmmoData& AmmoData) const
 
 bool UPlayerHUDWidget::IsPlayerAlive() const
 {
-	const auto HealthComponent = ShooterUtils::GetPlayerComponent<UHealthComponent>(GetOwningPlayerPawn());
-	return HealthComponent && !HealthComponent->IsDead();
+	const auto HealthComp = ShooterUtils::GetPlayerComponent<UHealthComponent>(GetOwningPlayerPawn());
+	return HealthComp && !HealthComp->IsDead();
 }
 
 bool UPlayerHUDWidget::IsPlayerSpectating() const

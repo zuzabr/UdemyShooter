@@ -37,7 +37,6 @@ void EmptyLinkFunctionForGeneratedCodeNPCWeaponComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UNPCWeaponComponent_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "Weapon/NPCWeaponComponent.h" },
 		{ "ModuleRelativePath", "Public/Weapon/NPCWeaponComponent.h" },
 	};
@@ -78,9 +77,9 @@ void EmptyLinkFunctionForGeneratedCodeNPCWeaponComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_NPCWeaponComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UNPCWeaponComponent, UNPCWeaponComponent::StaticClass, TEXT("UNPCWeaponComponent"), &Z_Registration_Info_UClass_UNPCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNPCWeaponComponent), 49566795U) },
+		{ Z_Construct_UClass_UNPCWeaponComponent, UNPCWeaponComponent::StaticClass, TEXT("UNPCWeaponComponent"), &Z_Registration_Info_UClass_UNPCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNPCWeaponComponent), 620077842U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_NPCWeaponComponent_h_308828504(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_NPCWeaponComponent_h_3469658780(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_NPCWeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_NPCWeaponComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

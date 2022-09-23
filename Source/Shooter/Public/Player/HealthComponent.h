@@ -25,6 +25,10 @@ public:
 		return Health;
 	}
 
+	
+
+
+
 	float GetMaxHealth() const
 	{
 		return MaxHealth;
