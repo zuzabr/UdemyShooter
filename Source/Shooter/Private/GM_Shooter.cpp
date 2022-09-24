@@ -9,6 +9,7 @@
 #include "Player/ShooterPlayerState.h"
 #include "ShooterUtils.h"
 #include "Player/RespawnComponent.h"
+#include "EngineUtils.h" // чтобы получить всех акторов определенного типа
 
 
 constexpr static int32 MinRoundTimeForRespawn = 10;
@@ -62,7 +63,6 @@ void AGM_Shooter::StartRound()
 void AGM_Shooter::GameTimerUpdate()
 {
 	
-	
 	if (--RoundCountDown == 0)
 	{
 		GetWorldTimerManager().ClearTimer(GameRoundTimerHandle);
@@ -75,8 +75,7 @@ void AGM_Shooter::GameTimerUpdate()
 		}
 		else
 		{
-			UE_LOG(LogTemp, Display, TEXT("------------------Game Over--------------"));
-			LogPlayerInfo();
+			GameOver();
 		}
 	}
 }
@@ -194,4 +193,19 @@ void AGM_Shooter::StartRespawn(AController* Controller)
 void AGM_Shooter::RespawnRequest(AController* Controller)
 {
 	ResetOnePlayer(Controller);
+}
+
+void AGM_Shooter::GameOver()
+{
+	UE_LOG(LogTemp, Display, TEXT("------------------Game Over--------------"));
+	LogPlayerInfo();
+
+	for (auto Pawn : TActorRange<APawn>(GetWorld()))
+	{
+		if (Pawn)
+		{
+			Pawn->TurnOff();
+			Pawn->DisableInput(nullptr);
+		}
+	}
 }

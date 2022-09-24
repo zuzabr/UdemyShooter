@@ -129,6 +129,9 @@
     <ClCompile Include="..\..\Source\Shooter\Private\UI\PlayerHUDWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\SpectatorWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon">
       <UniqueIdentifier>{84C832EE-7572-33F6-959B-207DDF7B358B}</UniqueIdentifier>
     </Filter>
@@ -262,6 +265,9 @@
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\PlayerHUDWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\SpectatorWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon">

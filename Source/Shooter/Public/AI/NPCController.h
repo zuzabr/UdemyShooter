@@ -29,7 +29,7 @@ protected:
 		URespawnComponent* RespawnComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-		FName FocusOnKeyName = "EnemyActor";
+		FName FocusOnKeyName = "Enemy"; // The Name must be equal to blackboard value in UE
 
 private:
 	AActor* GetFocusOnActor() const;

@@ -32,3 +32,8 @@ void URespawnComponent::RespawnTimerUpdate()
 		GameMode->RespawnRequest(Cast<AController>(GetOwner()));
 	}
 }
+
+bool URespawnComponent::IsRespawnInProgress() const
+{
+	return GetWorld() && GetWorld()->GetTimerManager().IsTimerActive(RespawnTimerHandle);
+}
