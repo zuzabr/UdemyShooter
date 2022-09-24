@@ -6,10 +6,8 @@
 #include "GameFramework/Character.h"
 #include "DefaultChar.generated.h"
 
-class UCameraComponent;
-class USpringArmComponent;
+
 class UHealthComponent;
-class UTextRenderComponent;
 class UWeaponComponent;
 
 
@@ -28,20 +26,13 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void OnDeath();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		UCameraComponent* CameraComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		USpringArmComponent* SpringArmComponent;
+	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UHealthComponent* HealthComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UWeaponComponent* WeaponComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		UTextRenderComponent* HealthTextComponent;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Animations")
 		UAnimMontage* DeathAnimMontage;
@@ -59,10 +50,10 @@ protected:
 public:	
 	
 	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-		bool IsSprinting() const;
+		virtual bool IsSprinting() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 		float GetMovementDirection() const;
@@ -73,14 +64,7 @@ public:
 
 private:
 
-	bool bRun = false;
-	bool bMoveForward = false;
 
-	void MoveForward(float Scale);
-	void MoveRight(float Scale);
-
-	void SprintOn();
-	void SprintOff();
 
 	
 	void OnHealthChanged(float Health);

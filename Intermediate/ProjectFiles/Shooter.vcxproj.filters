@@ -108,6 +108,9 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Player\HealthComponent.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\PlayerChar.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\Player\PlayerControllerShooter.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
@@ -244,6 +247,9 @@
       <Filter>Source\Shooter\Public\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Player\HealthComponent.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\PlayerChar.h">
       <Filter>Source\Shooter\Public\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Player\PlayerControllerShooter.h">

@@ -2,9 +2,6 @@
 
 
 #include "Player/DefaultChar.h"
-#include "Camera/CameraComponent.h"
-#include "Components/InputComponent.h"
-#include "GameFramework/SpringArmComponent.h"
 #include "Player/CMC_Shooter.h"
 #include "Player/HealthComponent.h"
 #include "Components/TextRenderComponent.h"
@@ -16,23 +13,12 @@
 DEFINE_LOG_CATEGORY_STATIC(DefaultCharacterLog, All, All);
 
 // Конструктор
-ADefaultChar::ADefaultChar(const FObjectInitializer& ObjectInit) :Super(ObjectInit.SetDefaultSubobjectClass<UCMC_Shooter>(ACharacter::CharacterMovementComponentName))
+ADefaultChar::ADefaultChar(const FObjectInitializer& ObjectInit) : Super(ObjectInit.SetDefaultSubobjectClass<UCMC_Shooter>(ACharacter::CharacterMovementComponentName))
 {
 
 	PrimaryActorTick.bCanEverTick = true;
 
-	SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
-	SpringArmComponent->SetupAttachment(GetRootComponent());
-	SpringArmComponent->bUsePawnControlRotation = true;
-
-	CameraComponent = CreateDefaultSubobject<UCameraComponent>("Camera");
-	CameraComponent->SetupAttachment(SpringArmComponent);
-
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>("HealthComponent");
-
-	HealthTextComponent = CreateDefaultSubobject<UTextRenderComponent>("Components");
-	HealthTextComponent->SetupAttachment(GetRootComponent());
-
 	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("WeaponComponent");
 }
 
@@ -41,7 +27,7 @@ void ADefaultChar::BeginPlay()
 	Super::BeginPlay();
 
 	check(HealthComponent);
-	check(HealthTextComponent);
+	
 	check(GetCharacterMovement());
 	check(GetMesh());
 
@@ -59,35 +45,13 @@ void ADefaultChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
-	
-	
 }
 
-void ADefaultChar::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	check(PlayerInputComponent);
-	check(WeaponComponent);
-
-	PlayerInputComponent->BindAxis("MoveForward", this, &ADefaultChar::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &ADefaultChar::MoveRight);
-	PlayerInputComponent->BindAxis("LookUp", this, &ADefaultChar::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("TurnAround", this, &ADefaultChar::AddControllerYawInput);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ADefaultChar::Jump);
-	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ADefaultChar::SprintOn);
-	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ADefaultChar::SprintOff);
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &UWeaponComponent::StartFire);
-	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &UWeaponComponent::StopFire);
-	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, WeaponComponent, &UWeaponComponent::NextWeapon);
-	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &UWeaponComponent::Reload);
-	
-}
 
 bool ADefaultChar::IsSprinting() const
 {
-	return bRun && bMoveForward && !GetVelocity().IsZero();
+	return false;
 }
 
 float ADefaultChar::GetMovementDirection() const
@@ -108,28 +72,7 @@ UHealthComponent* ADefaultChar::GetHealth(APawn* PlayerPawn) const
 	
 }
 
-void ADefaultChar::MoveForward(float Scale)
-{
-	if (Scale == 0.0f) return;
-	bMoveForward = (Scale > 0.0f);
-	AddMovementInput(GetActorForwardVector(), Scale);
-}
 
-void ADefaultChar::MoveRight(float Scale)
-{
-	if (Scale == 0.0f) return;
-	AddMovementInput(GetActorRightVector(), Scale);
-}
-
-void ADefaultChar::SprintOn()
-{
-	bRun = true;
-}
-
-void ADefaultChar::SprintOff()
-{
-	bRun = false;
-}
 
 void ADefaultChar::OnDeath()
 {
@@ -141,11 +84,6 @@ void ADefaultChar::OnDeath()
 	GetCharacterMovement()->DisableMovement();
 	SetLifeSpan(5.0f);
 
-	if (Controller)
-	{
-		Controller->ChangeState(NAME_Spectating);
-	}
-
 	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	WeaponComponent->StopFire();
@@ -156,7 +94,7 @@ void ADefaultChar::OnDeath()
 
 void ADefaultChar::OnHealthChanged(float Health)
 {
-	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"), Health)));
+	
 }
 
 void ADefaultChar::OnGroundLanded(const FHitResult& Hit)

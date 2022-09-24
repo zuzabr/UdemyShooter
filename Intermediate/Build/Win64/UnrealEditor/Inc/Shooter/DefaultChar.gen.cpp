@@ -14,11 +14,8 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Shooter();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
-	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	SHOOTER_API UClass* Z_Construct_UClass_UHealthComponent_NoRegister();
 	SHOOTER_API UClass* Z_Construct_UClass_UWeaponComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UTextRenderComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 // End Cross Module References
@@ -115,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		{ "ModuleRelativePath", "Public/Player/DefaultChar.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADefaultChar, nullptr, "IsSprinting", nullptr, nullptr, sizeof(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::DefaultChar_eventIsSprinting_Parms), Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADefaultChar, nullptr, "IsSprinting", nullptr, nullptr, sizeof(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::DefaultChar_eventIsSprinting_Parms), Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ADefaultChar_IsSprinting_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ADefaultChar_IsSprinting()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -178,14 +175,6 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraComponent_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraComponent;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpringArmComponent_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArmComponent;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealthComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthComponent;
@@ -193,10 +182,6 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponComponent;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealthTextComponent_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthTextComponent;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DeathAnimMontage_MetaData[];
 #endif
@@ -223,7 +208,7 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ADefaultChar_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ADefaultChar_GetMovementDirection, "GetMovementDirection" }, // 3537570001
-		{ &Z_Construct_UFunction_ADefaultChar_IsSprinting, "IsSprinting" }, // 3306602186
+		{ &Z_Construct_UFunction_ADefaultChar_IsSprinting, "IsSprinting" }, // 2989730413
 		{ &Z_Construct_UFunction_ADefaultChar_OnGroundLanded, "OnGroundLanded" }, // 718077032
 	};
 #if WITH_METADATA
@@ -234,22 +219,6 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent_MetaData[] = {
-		{ "Category", "Components" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Player/DefaultChar.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent = { "CameraComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, CameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent_MetaData[] = {
-		{ "Category", "Components" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Player/DefaultChar.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent = { "SpringArmComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, SpringArmComponent), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthComponent_MetaData[] = {
 		{ "Category", "Components" },
@@ -266,14 +235,6 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_WeaponComponent = { "WeaponComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, WeaponComponent), Z_Construct_UClass_UWeaponComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_WeaponComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_WeaponComponent_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthTextComponent_MetaData[] = {
-		{ "Category", "Components" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/Player/DefaultChar.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthTextComponent = { "HealthTextComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, HealthTextComponent), Z_Construct_UClass_UTextRenderComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthTextComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthTextComponent_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADefaultChar_Statics::NewProp_DeathAnimMontage_MetaData[] = {
 		{ "Category", "Animations" },
@@ -303,11 +264,8 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName = { "MaterialColorName", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADefaultChar, MaterialColorName), METADATA_PARAMS(Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ADefaultChar_Statics::NewProp_MaterialColorName_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADefaultChar_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_CameraComponent,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_SpringArmComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_WeaponComponent,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_HealthTextComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_DeathAnimMontage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamageVelocity,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADefaultChar_Statics::NewProp_LandedDamage,
@@ -349,9 +307,9 @@ void EmptyLinkFunctionForGeneratedCodeDefaultChar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ADefaultChar, ADefaultChar::StaticClass, TEXT("ADefaultChar"), &Z_Registration_Info_UClass_ADefaultChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADefaultChar), 444826745U) },
+		{ Z_Construct_UClass_ADefaultChar, ADefaultChar::StaticClass, TEXT("ADefaultChar"), &Z_Registration_Info_UClass_ADefaultChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADefaultChar), 4157240372U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_1517368549(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_3421812479(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Player_DefaultChar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
