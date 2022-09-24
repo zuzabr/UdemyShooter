@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterCoreTypes() {}
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FGameData();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
+	SHOOTER_API UEnum* Z_Construct_UEnum_Shooter_EMatchState();
 // End Cross Module References
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AmmoData;
 class UScriptStruct* FAmmoData::StaticStruct()
@@ -606,9 +607,70 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FGameData>()
 		}
 		return Z_Registration_Info_UScriptStruct_GameData.InnerSingleton;
 	}
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EMatchState;
+	static UEnum* EMatchState_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_EMatchState.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_EMatchState.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Shooter_EMatchState, Z_Construct_UPackage__Script_Shooter(), TEXT("EMatchState"));
+		}
+		return Z_Registration_Info_UEnum_EMatchState.OuterSingleton;
+	}
+	template<> SHOOTER_API UEnum* StaticEnum<EMatchState>()
+	{
+		return EMatchState_StaticEnum();
+	}
+	struct Z_Construct_UEnum_Shooter_EMatchState_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators[] = {
+		{ "EMatchState::WaitingToStart", (int64)EMatchState::WaitingToStart },
+		{ "EMatchState::InProgress", (int64)EMatchState::InProgress },
+		{ "EMatchState::Pause", (int64)EMatchState::Pause },
+		{ "EMatchState::GameOver", (int64)EMatchState::GameOver },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "GameOver.Name", "EMatchState::GameOver" },
+		{ "InProgress.Name", "EMatchState::InProgress" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+		{ "Pause.Name", "EMatchState::Pause" },
+		{ "WaitingToStart.Name", "EMatchState::WaitingToStart" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Shooter_EMatchState_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		"EMatchState",
+		"EMatchState",
+		Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams))
+	};
+	UEnum* Z_Construct_UEnum_Shooter_EMatchState()
+	{
+		if (!Z_Registration_Info_UEnum_EMatchState.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EMatchState.InnerSingleton, Z_Construct_UEnum_Shooter_EMatchState_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_EMatchState.InnerSingleton;
+	}
 	struct Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics
 	{
+		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
+	};
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo[] = {
+		{ EMatchState_StaticEnum, TEXT("EMatchState"), &Z_Registration_Info_UEnum_EMatchState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4228247019U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo[] = {
 		{ FAmmoData::StaticStruct, Z_Construct_UScriptStruct_FAmmoData_Statics::NewStructOps, TEXT("AmmoData"), &Z_Registration_Info_UScriptStruct_AmmoData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmmoData), 2012568362U) },
@@ -618,8 +680,8 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FGameData>()
 		{ FWeaponUIData::StaticStruct, Z_Construct_UScriptStruct_FWeaponUIData_Statics::NewStructOps, TEXT("WeaponUIData"), &Z_Registration_Info_UScriptStruct_WeaponUIData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponUIData), 2823947487U) },
 		{ FGameData::StaticStruct, Z_Construct_UScriptStruct_FGameData_Statics::NewStructOps, TEXT("GameData"), &Z_Registration_Info_UScriptStruct_GameData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameData), 1238543316U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_4185697764(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_1963230222(TEXT("/Script/Shooter"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo),
-		nullptr, 0);
+		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

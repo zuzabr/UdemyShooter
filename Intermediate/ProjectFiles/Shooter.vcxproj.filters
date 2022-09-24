@@ -30,6 +30,12 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\Shooter">
       <UniqueIdentifier>{E89F5254-55D1-3544-A4A1-A8FB6FBB79B2}</UniqueIdentifier>
     </Filter>
@@ -127,6 +133,9 @@
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\GameDataWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\PauseWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\PlayerHUDWidget.cpp">
@@ -268,6 +277,9 @@
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\GameDataWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\PauseWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\PlayerHUDWidget.h">

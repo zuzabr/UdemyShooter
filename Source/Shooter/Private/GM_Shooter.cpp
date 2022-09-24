@@ -30,6 +30,8 @@ void AGM_Shooter::StartPlay()
 	CreateTeamsInfo();
 	CurrentRound = 1;
 	StartRound();
+
+	SetMatchState(EMatchState::InProgress);
 }
 
 UClass* AGM_Shooter::GetDefaultPawnClassForController_Implementation(AController* InController)
@@ -208,4 +210,34 @@ void AGM_Shooter::GameOver()
 			Pawn->DisableInput(nullptr);
 		}
 	}
+
+	SetMatchState(EMatchState::GameOver);
+}
+
+void AGM_Shooter::SetMatchState(EMatchState State)
+{
+	if (MatchState == State) return;
+	MatchState = State;
+	OnMatchStateChanged.Broadcast(MatchState);
+}
+
+bool AGM_Shooter::SetPause(APlayerController* PC, FCanUnpause CanUnpauseDelegate)
+{
+	const auto PauseSet = Super::SetPause(PC, CanUnpauseDelegate);
+	if (PauseSet)
+	{
+		SetMatchState(EMatchState::Pause);
+	}
+	return PauseSet;
+}
+
+bool AGM_Shooter::ClearPause()
+{
+	const auto PauseCleared = Super::ClearPause();
+	if (PauseCleared)
+	{
+		SetMatchState(EMatchState::InProgress);
+	}
+
+	return PauseCleared;
 }

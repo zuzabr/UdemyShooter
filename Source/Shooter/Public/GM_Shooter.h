@@ -16,6 +16,8 @@ class SHOOTER_API AGM_Shooter : public AGameModeBase
 
 public:
 	AGM_Shooter(); 
+
+	FOnMatchStateChangedSignature OnMatchStateChanged; // Объявление делегата (См CoreTypes)
 	virtual void StartPlay() override;
 	virtual UClass* GetDefaultPawnClassForController_Implementation(AController* InController) override;
 	
@@ -26,6 +28,9 @@ public:
 	int32 GetRoundSecondsRemain() const { return RoundCountDown; }
 
 	void RespawnRequest(AController* Controller);
+
+	virtual bool SetPause(APlayerController* PC, FCanUnpause CanUnpauseDelegate = FCanUnpause()) override;
+	virtual bool ClearPause() override;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Game")
@@ -38,6 +43,7 @@ protected:
 		FGameData GameData;
 
 private:
+	EMatchState MatchState = EMatchState::WaitingToStart;
 	int32 CurrentRound = 1;
 	int32 RoundCountDown = 0;
 	FTimerHandle GameRoundTimerHandle;
@@ -57,5 +63,8 @@ private:
 	void StartRespawn(AController* Controller);
 
 	void GameOver();
+
+	void SetMatchState(EMatchState State);
+
 
 };

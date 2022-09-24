@@ -59,4 +59,13 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<struct FGameData>();
 #define CURRENT_FILE_ID FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h
 
 
+#define FOREACH_ENUM_EMATCHSTATE(op) \
+	op(EMatchState::WaitingToStart) \
+	op(EMatchState::InProgress) \
+	op(EMatchState::Pause) \
+	op(EMatchState::GameOver) 
+
+enum class EMatchState : uint8;
+template<> SHOOTER_API UEnum* StaticEnum<EMatchState>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
