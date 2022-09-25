@@ -20,6 +20,7 @@
 			"DefaultChar.cpp.obj",
 			"HealthComponent.cpp.obj",
 			"PlayerChar.cpp.obj",
+			"PlayerControllerShooter.cpp.obj",
 			"RespawnComponent.cpp.obj",
 			"ShooterPlayerState.cpp.obj",
 			"GameDataWidget.cpp.obj",
@@ -40,9 +41,17 @@
 			"ReloadFinishedAnimNotify.cpp.obj",
 			"Shooter.cpp.obj",
 			"GM_Shooter.cpp.obj",
-			"PlayerControllerShooter.cpp.obj",
+			"GMMenu.cpp.obj",
+			"LvlItemWidget.cpp.obj",
+			"MenuHUD.cpp.obj",
+			"MenuPlayerController.cpp.obj",
+			"MenuWidget.cpp.obj",
+			"ShooterGameInstance.cpp.obj",
 			"DefaultHUD.cpp.obj",
-			"PauseWidget.cpp.obj"
+			"GameOverWidget.cpp.obj",
+			"GoToMenuWidget.cpp.obj",
+			"PauseWidget.cpp.obj",
+			"StatisticWidget.cpp.obj"
 		],
 		"Module.Shooter.gen.cpp.obj": [
 			"AmmoAmountDecorator.gen.cpp.obj",
@@ -71,6 +80,7 @@
 			"NPCController.gen.cpp.obj",
 			"NPCPerceptionComponent.gen.cpp.obj",
 			"NPCWeaponComponent.gen.cpp.obj",
+			"PauseWidget.gen.cpp.obj",
 			"PlayerChar.gen.cpp.obj",
 			"PlayerControllerShooter.gen.cpp.obj",
 			"PlayerHUDWidget.gen.cpp.obj",
@@ -84,9 +94,17 @@
 			"WeaponComponent.gen.cpp.obj",
 			"WeaponFX.gen.cpp.obj",
 			"DefaultHUD.gen.cpp.obj",
-			"PauseWidget.gen.cpp.obj",
+			"GameOverWidget.gen.cpp.obj",
+			"GMMenu.gen.cpp.obj",
+			"GoToMenuWidget.gen.cpp.obj",
+			"LvlItemWidget.gen.cpp.obj",
+			"MenuHUD.gen.cpp.obj",
+			"MenuPlayerController.gen.cpp.obj",
+			"MenuWidget.gen.cpp.obj",
 			"Shooter.init.gen.cpp.obj",
-			"ShooterCoreTypes.gen.cpp.obj"
+			"ShooterCoreTypes.gen.cpp.obj",
+			"ShooterGameInstance.gen.cpp.obj",
+			"StatisticWidget.gen.cpp.obj"
 		]
 	}
 }

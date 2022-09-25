@@ -34,6 +34,7 @@
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/RespawnComponent.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/RifleWeapon.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/RocketProjectile.gen.cpp"
+#include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/ShooterCoreTypes.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/ShooterPlayerState.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/SpectatorWidget.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/WeaponComponent.gen.cpp"

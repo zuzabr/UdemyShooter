@@ -21,6 +21,7 @@
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/RespawnComponent.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/ShooterPlayerState.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/UI/GameDataWidget.cpp"
+#include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/UI/PauseWidget.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/UI/PlayerHUDWidget.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/UI/SpectatorWidget.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Weapon/Animations/DefaultAnimNotify.cpp"

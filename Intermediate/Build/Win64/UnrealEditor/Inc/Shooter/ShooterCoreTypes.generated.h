@@ -55,6 +55,13 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<struct FWeaponUIData>();
 
 template<> SHOOTER_API UScriptStruct* StaticStruct<struct FGameData>();
 
+#define FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_140_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FLevelData_Statics; \
+	SHOOTER_API static class UScriptStruct* StaticStruct();
+
+
+template<> SHOOTER_API UScriptStruct* StaticStruct<struct FLevelData>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h
 

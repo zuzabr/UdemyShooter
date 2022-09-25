@@ -25,6 +25,7 @@
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/NPCController.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/NPCPerceptionComponent.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/NPCWeaponComponent.gen.cpp"
+#include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/PauseWidget.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/PlayerChar.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/PlayerControllerShooter.gen.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Intermediate/Build/Win64/UnrealEditor/Inc/Shooter/PlayerHUDWidget.gen.cpp"

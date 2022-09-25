@@ -17,6 +17,7 @@
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/DefaultChar.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/HealthComponent.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/PlayerChar.cpp"
+#include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/PlayerControllerShooter.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/RespawnComponent.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/Player/ShooterPlayerState.cpp"
 #include "C:/MyWork/UnrealProjects/Shooter 5.0/Source/Shooter/Private/UI/GameDataWidget.cpp"
