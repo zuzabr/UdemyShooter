@@ -7,6 +7,7 @@
 #include "Player/HealthComponent.h"
 #include "ShooterUtils.h"
 
+
 float UPlayerHUDWidget::GetHealthPercent() const
 {
 	

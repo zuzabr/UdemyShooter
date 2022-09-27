@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeBasePickUp() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Shooter();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundCue_NoRegister();
 // End Cross Module References
 	void ABasePickUp::StaticRegisterNativesABasePickUp()
 	{
@@ -37,6 +38,10 @@ void EmptyLinkFunctionForGeneratedCodeBasePickUp() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_RespawnTime_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_RespawnTime;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_PickupSound_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupSound;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -68,9 +73,17 @@ void EmptyLinkFunctionForGeneratedCodeBasePickUp() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABasePickUp_Statics::NewProp_RespawnTime = { "RespawnTime", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasePickUp, RespawnTime), METADATA_PARAMS(Z_Construct_UClass_ABasePickUp_Statics::NewProp_RespawnTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasePickUp_Statics::NewProp_RespawnTime_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasePickUp_Statics::NewProp_PickupSound_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/PickUps/BasePickUp.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasePickUp_Statics::NewProp_PickupSound = { "PickupSound", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasePickUp, PickupSound), Z_Construct_UClass_USoundCue_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasePickUp_Statics::NewProp_PickupSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasePickUp_Statics::NewProp_PickupSound_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasePickUp_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePickUp_Statics::NewProp_CollisionComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePickUp_Statics::NewProp_RespawnTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePickUp_Statics::NewProp_PickupSound,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABasePickUp_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABasePickUp>::IsAbstract,
@@ -108,9 +121,9 @@ void EmptyLinkFunctionForGeneratedCodeBasePickUp() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABasePickUp, ABasePickUp::StaticClass, TEXT("ABasePickUp"), &Z_Registration_Info_UClass_ABasePickUp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePickUp), 3039672586U) },
+		{ Z_Construct_UClass_ABasePickUp, ABasePickUp::StaticClass, TEXT("ABasePickUp"), &Z_Registration_Info_UClass_ABasePickUp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePickUp), 1538503366U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_332154181(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_2636102362(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

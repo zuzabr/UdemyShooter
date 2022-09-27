@@ -33,7 +33,7 @@ public:
 		bool IsPlayerSpectating() const;
 //-----------------------Variables-----------------------	
 
-private:
+
 
 //-----------------------Functions-----------------------
 	

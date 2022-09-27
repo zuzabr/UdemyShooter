@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterCoreTypes() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FImpactlData();
 	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundCue_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponUIData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FGameData();
@@ -333,6 +334,10 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FImpactlData>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DecalData_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_DecalData;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Sound_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Sound;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -360,9 +365,17 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FImpactlData>()
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData = { "DecalData", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactlData, DecalData), Z_Construct_UScriptStruct_FDecalData, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData_MetaData)) }; // 2694734361
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound = { "Sound", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactlData, Sound), Z_Construct_UClass_USoundCue_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FImpactlData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_NiagaraEffect,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FImpactlData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
@@ -770,12 +783,12 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FLevelData>()
 		{ FAmmoData::StaticStruct, Z_Construct_UScriptStruct_FAmmoData_Statics::NewStructOps, TEXT("AmmoData"), &Z_Registration_Info_UScriptStruct_AmmoData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmmoData), 2012568362U) },
 		{ FWeaponData::StaticStruct, Z_Construct_UScriptStruct_FWeaponData_Statics::NewStructOps, TEXT("WeaponData"), &Z_Registration_Info_UScriptStruct_WeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponData), 1452695389U) },
 		{ FDecalData::StaticStruct, Z_Construct_UScriptStruct_FDecalData_Statics::NewStructOps, TEXT("DecalData"), &Z_Registration_Info_UScriptStruct_DecalData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDecalData), 2694734361U) },
-		{ FImpactlData::StaticStruct, Z_Construct_UScriptStruct_FImpactlData_Statics::NewStructOps, TEXT("ImpactlData"), &Z_Registration_Info_UScriptStruct_ImpactlData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FImpactlData), 642948408U) },
+		{ FImpactlData::StaticStruct, Z_Construct_UScriptStruct_FImpactlData_Statics::NewStructOps, TEXT("ImpactlData"), &Z_Registration_Info_UScriptStruct_ImpactlData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FImpactlData), 2926053325U) },
 		{ FWeaponUIData::StaticStruct, Z_Construct_UScriptStruct_FWeaponUIData_Statics::NewStructOps, TEXT("WeaponUIData"), &Z_Registration_Info_UScriptStruct_WeaponUIData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponUIData), 2823947487U) },
 		{ FGameData::StaticStruct, Z_Construct_UScriptStruct_FGameData_Statics::NewStructOps, TEXT("GameData"), &Z_Registration_Info_UScriptStruct_GameData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameData), 1238543316U) },
 		{ FLevelData::StaticStruct, Z_Construct_UScriptStruct_FLevelData_Statics::NewStructOps, TEXT("LevelData"), &Z_Registration_Info_UScriptStruct_LevelData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLevelData), 4218461971U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_1695767528(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_1759364111(TEXT("/Script/Shooter"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo));

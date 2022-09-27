@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 	UPackage* Z_Construct_UPackage__Script_Shooter();
 	SHOOTER_API UClass* Z_Construct_UClass_UWeaponFX_NoRegister();
 	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 // End Cross Module References
 	void ARifleWeapon::StaticRegisterNativesARifleWeapon()
 	{
@@ -50,6 +51,10 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MuzzleFXComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_MuzzleFXComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireAudioComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_FireAudioComponent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -100,12 +105,20 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent = { "MuzzleFXComponent", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARifleWeapon, MuzzleFXComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Weapon/RifleWeapon.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent = { "FireAudioComponent", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARifleWeapon, FireAudioComponent), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARifleWeapon_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireRate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_BulletSpread,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_Damage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_WeaponFXComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARifleWeapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARifleWeapon>::IsAbstract,
@@ -143,9 +156,9 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARifleWeapon, ARifleWeapon::StaticClass, TEXT("ARifleWeapon"), &Z_Registration_Info_UClass_ARifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARifleWeapon), 2314255699U) },
+		{ Z_Construct_UClass_ARifleWeapon, ARifleWeapon::StaticClass, TEXT("ARifleWeapon"), &Z_Registration_Info_UClass_ARifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARifleWeapon), 773426800U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_3686940164(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_1199633974(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

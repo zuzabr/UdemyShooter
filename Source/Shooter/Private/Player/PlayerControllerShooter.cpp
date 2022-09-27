@@ -4,6 +4,7 @@
 #include "Player/PlayerControllerShooter.h"
 #include "Player/RespawnComponent.h"
 #include "GM_Shooter.h"
+#include "ShooterGameInstance.h"
 
 APlayerControllerShooter::APlayerControllerShooter()
 {
@@ -44,6 +45,7 @@ void APlayerControllerShooter::SetupInputComponent()
 	if (!InputComponent) return;
 
 	InputComponent->BindAction("PauseGame", IE_Pressed, this, &APlayerControllerShooter::OnPauseGame);
+	InputComponent->BindAction("Mute", IE_Pressed, this, &APlayerControllerShooter::OnMuteSound);
 }
 
 void APlayerControllerShooter::OnPauseGame()
@@ -51,4 +53,13 @@ void APlayerControllerShooter::OnPauseGame()
 	if (!GetWorld() || !GetWorld()->GetAuthGameMode()) return;
 
 	GetWorld()->GetAuthGameMode()->SetPause(this);
+}
+
+void APlayerControllerShooter::OnMuteSound()
+{
+	if (!GetWorld()) return;
+	const auto GameInstance = GetWorld()->GetGameInstance<UShooterGameInstance>();
+	if (!GameInstance) return;
+
+	GameInstance->ToggleVolume();
 }

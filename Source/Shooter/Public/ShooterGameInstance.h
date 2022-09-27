@@ -7,6 +7,7 @@
 #include "ShooterCoreTypes.h"
 #include "ShooterGameInstance.generated.h"
 
+class USoundClass;
 
 UCLASS()
 class SHOOTER_API UShooterGameInstance : public UGameInstance
@@ -19,14 +20,20 @@ public:
 
 	TArray<FLevelData> GetLevelsData() const {return  LevelsData;}
 	FName GetMenuLvlName() const { return MenuLvlName; }
+
+	void ToggleVolume();
 	
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game", meta = (ToolTip = "Levels names must be unique"))
 		TArray<FLevelData> LevelsData;
 
 	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Game")
+	UPROPERTY(EditDefaultsOnly, Category = "Game")
 		FName MenuLvlName = NAME_None;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Sound")
+		USoundClass* MasterSoundClass;
+
 
 private:
 	FLevelData StartupLvl;

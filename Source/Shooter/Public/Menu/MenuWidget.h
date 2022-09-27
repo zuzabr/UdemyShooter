@@ -11,6 +11,7 @@ class UButton;
 class UHorizontalBox;
 class UShooterGameInstance;
 class ULvlItemWidget;
+class USoundCue;
 
 UCLASS()
 class SHOOTER_API UMenuWidget : public UUserWidget
@@ -32,6 +33,8 @@ protected:
 	UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "UI")
 		TSubclassOf<UUserWidget> LvlItemWidgetClass;
 
+	UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "Sound")
+		USoundCue* StartGameSound;
 	
 	
 private:

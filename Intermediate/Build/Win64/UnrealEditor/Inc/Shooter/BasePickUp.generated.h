@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SHOOTER_BasePickUp_generated_h
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_SPARSE_DATA
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_RPC_WRAPPERS
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_SPARSE_DATA
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_RPC_WRAPPERS
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABasePickUp(); \
 	friend struct Z_Construct_UClass_ABasePickUp_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(ABasePickUp)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_INCLASS \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesABasePickUp(); \
 	friend struct Z_Construct_UClass_ABasePickUp_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ABasePickUp)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_STANDARD_CONSTRUCTORS \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABasePickUp(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABasePickUp) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABasePickUp(ABasePickUp&&); \
@@ -58,25 +58,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABasePickUp)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_11_PROLOG
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_GENERATED_BODY_LEGACY \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_12_PROLOG
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_SPARSE_DATA \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_RPC_WRAPPERS \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_INCLASS \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_STANDARD_CONSTRUCTORS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_SPARSE_DATA \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_RPC_WRAPPERS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_INCLASS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_GENERATED_BODY \
+#define FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_SPARSE_DATA \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_SPARSE_DATA \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Shooter_5_0_Source_Shooter_Public_PickUps_BasePickUp_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

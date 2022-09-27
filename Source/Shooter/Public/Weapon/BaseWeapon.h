@@ -10,6 +10,7 @@
 class USkeletalMeshComponent;
 class UNiagaraSystem;
 class UNiagaraComponent;
+class USoundCue;
 
 UCLASS()
 class SHOOTER_API ABaseWeapon : public AActor
@@ -59,6 +60,9 @@ protected:
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "VFX")
         UNiagaraSystem* MuzzleFX;
+
+    UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "Sound")
+        USoundCue* FireSound;
 
     
 

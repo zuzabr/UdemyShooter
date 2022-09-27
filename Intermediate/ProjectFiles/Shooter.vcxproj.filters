@@ -147,6 +147,12 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Player\ShooterPlayerState.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\Sound">
+      <UniqueIdentifier>{71C8CFC0-2AD7-30A2-BF1A-C6D87B8BFF72}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Sound\SoundFuncLib.cpp">
+      <Filter>Source\Shooter\Private\Sound</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\UI">
       <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
     </Filter>
@@ -323,6 +329,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Player\ShooterPlayerState.h">
       <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Sound">
+      <UniqueIdentifier>{16CF4A1E-5DE0-357F-B8A0-C6BABC52AD21}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Sound\SoundFuncLib.h">
+      <Filter>Source\Shooter\Public\Sound</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\UI">
       <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>

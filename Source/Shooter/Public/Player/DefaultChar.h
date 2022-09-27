@@ -9,6 +9,7 @@
 
 class UHealthComponent;
 class UWeaponComponent;
+class USoundCue;
 
 
 UCLASS()// Создается класс анреала
@@ -46,6 +47,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Material")
 		FName MaterialColorName = "BodyColor";
+
+	UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "Sound")
+		USoundCue* DeathSound;
 	
 
 public:	

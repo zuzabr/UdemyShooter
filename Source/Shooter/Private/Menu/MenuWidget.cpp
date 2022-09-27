@@ -8,6 +8,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Menu/LvlItemWidget.h"
 #include "Components/HorizontalBox.h"
+#include "Sound/SoundCue.h"
 
 
 void UMenuWidget::NativeOnInitialized()
@@ -34,6 +35,7 @@ void UMenuWidget::OnStartGame()
 	if (!GameInstance) return;
 
 	UGameplayStatics::OpenLevel(this, GameInstance->GetStartupLvl().LevelName);
+	UGameplayStatics::PlaySound2D(GetWorld(), StartGameSound);
 }
 
 

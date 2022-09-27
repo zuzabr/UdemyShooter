@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameInstance() {}
 	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
 	UPackage* Z_Construct_UPackage__Script_Shooter();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FLevelData();
+	ENGINE_API UClass* Z_Construct_UClass_USoundClass_NoRegister();
 // End Cross Module References
 	void UShooterGameInstance::StaticRegisterNativesUShooterGameInstance()
 	{
@@ -38,6 +39,10 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameInstance() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MenuLvlName_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_MenuLvlName;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MasterSoundClass_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_MasterSoundClass;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -67,11 +72,19 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameInstance() {}
 		{ "ModuleRelativePath", "Public/ShooterGameInstance.h" },
 	};
 #endif
-	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName = { "MenuLvlName", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShooterGameInstance, MenuLvlName), METADATA_PARAMS(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName_MetaData)) };
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName = { "MenuLvlName", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShooterGameInstance, MenuLvlName), METADATA_PARAMS(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MasterSoundClass_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/ShooterGameInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MasterSoundClass = { "MasterSoundClass", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShooterGameInstance, MasterSoundClass), Z_Construct_UClass_USoundClass_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MasterSoundClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MasterSoundClass_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UShooterGameInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_LevelsData_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_LevelsData,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MenuLvlName,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShooterGameInstance_Statics::NewProp_MasterSoundClass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UShooterGameInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UShooterGameInstance>::IsAbstract,
@@ -109,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeShooterGameInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterGameInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UShooterGameInstance, UShooterGameInstance::StaticClass, TEXT("UShooterGameInstance"), &Z_Registration_Info_UClass_UShooterGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameInstance), 2676295605U) },
+		{ Z_Construct_UClass_UShooterGameInstance, UShooterGameInstance::StaticClass, TEXT("UShooterGameInstance"), &Z_Registration_Info_UClass_UShooterGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UShooterGameInstance), 340887232U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterGameInstance_h_2102835836(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterGameInstance_h_2968070820(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterGameInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
