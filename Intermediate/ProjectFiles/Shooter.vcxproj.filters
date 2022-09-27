@@ -162,6 +162,9 @@
     <ClCompile Include="..\..\Source\Shooter\Private\UI\GoToMenuWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\HealthBarWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\PauseWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
@@ -334,6 +337,9 @@
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\GoToMenuWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\HealthBarWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\PauseWidget.h">

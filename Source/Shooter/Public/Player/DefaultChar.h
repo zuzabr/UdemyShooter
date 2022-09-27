@@ -25,6 +25,7 @@ protected:
 	
 	virtual void BeginPlay() override;
 	virtual void OnDeath();
+	virtual void OnHealthChanged(float Health);
 
 	
 
@@ -67,7 +68,7 @@ private:
 
 
 	
-	void OnHealthChanged(float Health);
+	
 	
 
 	UFUNCTION()

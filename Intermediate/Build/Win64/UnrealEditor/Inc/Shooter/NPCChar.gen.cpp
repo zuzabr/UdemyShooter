@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCChar() {}
 	SHOOTER_API UClass* Z_Construct_UClass_ADefaultChar();
 	UPackage* Z_Construct_UPackage__Script_Shooter();
 	AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 // End Cross Module References
 	void ANPCChar::StaticRegisterNativesANPCChar()
 	{
@@ -33,6 +34,10 @@ void EmptyLinkFunctionForGeneratedCodeNPCChar() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_BehaviorTreeAsset_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_BehaviorTreeAsset;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealthWidgetComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthWidgetComponent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -56,8 +61,17 @@ void EmptyLinkFunctionForGeneratedCodeNPCChar() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANPCChar_Statics::NewProp_BehaviorTreeAsset = { "BehaviorTreeAsset", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCChar, BehaviorTreeAsset), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANPCChar_Statics::NewProp_BehaviorTreeAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCChar_Statics::NewProp_BehaviorTreeAsset_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCChar_Statics::NewProp_HealthWidgetComponent_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/AI/NPCChar.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANPCChar_Statics::NewProp_HealthWidgetComponent = { "HealthWidgetComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCChar, HealthWidgetComponent), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ANPCChar_Statics::NewProp_HealthWidgetComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCChar_Statics::NewProp_HealthWidgetComponent_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANPCChar_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCChar_Statics::NewProp_BehaviorTreeAsset,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCChar_Statics::NewProp_HealthWidgetComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANPCChar_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANPCChar>::IsAbstract,
@@ -95,9 +109,9 @@ void EmptyLinkFunctionForGeneratedCodeNPCChar() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_AI_NPCChar_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ANPCChar, ANPCChar::StaticClass, TEXT("ANPCChar"), &Z_Registration_Info_UClass_ANPCChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCChar), 3009408877U) },
+		{ Z_Construct_UClass_ANPCChar, ANPCChar::StaticClass, TEXT("ANPCChar"), &Z_Registration_Info_UClass_ANPCChar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCChar), 189108887U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_AI_NPCChar_h_2715560720(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_AI_NPCChar_h_3751392107(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_AI_NPCChar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_AI_NPCChar_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

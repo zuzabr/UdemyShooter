@@ -31,6 +31,8 @@ protected:
 
 	UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "UI")
 		TSubclassOf<UUserWidget> LvlItemWidgetClass;
+
+	
 	
 private:
 

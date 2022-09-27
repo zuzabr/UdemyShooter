@@ -29,11 +29,14 @@ void UMenuWidget::NativeOnInitialized()
 
 void UMenuWidget::OnStartGame()
 {
+	
 	const auto GameInstance = GetShooterGameInstance();
 	if (!GameInstance) return;
 
 	UGameplayStatics::OpenLevel(this, GameInstance->GetStartupLvl().LevelName);
 }
+
+
 
 void UMenuWidget::OnQuitGame()
 {
