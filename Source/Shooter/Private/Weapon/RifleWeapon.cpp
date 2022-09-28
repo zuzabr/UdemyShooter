@@ -6,6 +6,9 @@
 #include "Engine/World.h"
 #include "Weapon/Effects/WeaponFX.h"
 #include "NiagaraComponent.h"
+#include "Sound/SoundCue.h"
+#include "Kismet/GameplayStatics.h"
+#include "Components/AudioComponent.h"
 
 ARifleWeapon::ARifleWeapon()
 {
@@ -21,7 +24,7 @@ void ARifleWeapon::BeginPlay()
 
 void ARifleWeapon::StartFire()
 {
-	InitMuzzleFX();
+	InitFX();
 	GetWorldTimerManager().SetTimer(ShotTimerHandle, this, &ARifleWeapon::MakeShot, FireRate, true);
 	MakeShot();
 }
@@ -29,7 +32,7 @@ void ARifleWeapon::StartFire()
 void ARifleWeapon::StopFire()
 {
 	GetWorldTimerManager().ClearTimer(ShotTimerHandle);
-	SetMuzzleFXVisibility(false);
+	SetFXActive(false);
 }
 
 
@@ -82,29 +85,42 @@ bool ARifleWeapon::GetTraceData(FVector& TraceStart, FVector& TraceEnd) const
 
 	return true;
 }
+
 void ARifleWeapon::MakeDamage(const FHitResult& HitResult)
 {
 	const auto DamagedActor = HitResult.GetActor();
 	if (!DamagedActor) return;
 
-	DamagedActor->TakeDamage(Damage, FDamageEvent(), GetController(), this);
+	FPointDamageEvent PointDamageEvent;
+	PointDamageEvent.HitInfo = HitResult;
+	DamagedActor->TakeDamage(Damage, PointDamageEvent, GetController(), this);
 }
 
-void ARifleWeapon::InitMuzzleFX()
+void ARifleWeapon::InitFX()
 {
 	if (!MuzzleFXComponent)
 	{
 		MuzzleFXComponent = SpawnMuzzleFX();
 	}
-	SetMuzzleFXVisibility(true);
+
+	if (!FireAudioComponent)
+	{
+		FireAudioComponent = UGameplayStatics::SpawnSoundAttached(FireSound, WeaponMesh, FireSocketName);
+	}
+	SetFXActive(true);
 }
 
-void ARifleWeapon::SetMuzzleFXVisibility(bool Visible)
+void ARifleWeapon::SetFXActive(bool IsActive)
 {
 	if (MuzzleFXComponent)
 	{
-		MuzzleFXComponent->SetPaused(!Visible);
-		MuzzleFXComponent->SetVisibility(Visible, true);
+		MuzzleFXComponent->SetPaused(!IsActive);
+		MuzzleFXComponent->SetVisibility(IsActive, true);
+	}
+
+	if (FireAudioComponent)
+	{
+		IsActive ? FireAudioComponent->Play() : FireAudioComponent->Stop();
 	}
 }
 
@@ -112,4 +128,17 @@ AController* ARifleWeapon::GetController() const
 {
 	const auto Pawn = Cast<APawn>(GetOwner());
 	return Pawn ? Pawn->GetController() : nullptr;
+}
+
+void ARifleWeapon::Zoom(bool Enabled)
+{
+	const auto Controller = Cast<APlayerController>(GetController());
+	if (!Controller || !Controller->PlayerCameraManager) return;
+
+	if (Enabled)
+	{
+		DefaultCameraFOV = Controller->PlayerCameraManager->GetFOVAngle();
+	}
+
+	Controller->PlayerCameraManager->SetFOV(Enabled ? FOVZoomAngle : DefaultCameraFOV);
 }

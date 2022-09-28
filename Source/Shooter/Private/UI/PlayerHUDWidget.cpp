@@ -7,11 +7,12 @@
 #include "Player/HealthComponent.h"
 #include "ShooterUtils.h"
 
+
 float UPlayerHUDWidget::GetHealthPercent() const
 {
 	
 	const auto HealthComp = ShooterUtils::GetPlayerComponent<UHealthComponent>(GetOwningPlayerPawn());
-	if (!HealthComp) return 0.0;
+	if (!HealthComp) return 0.0f;
 	return HealthComp->GetHealthPercent();
 }
 

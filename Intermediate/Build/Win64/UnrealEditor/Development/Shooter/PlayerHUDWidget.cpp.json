@@ -145,7 +145,11 @@
             "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\healthcomponent.generated.h",
             "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\weapon\\weaponcomponent.h",
             "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\weaponcomponent.generated.h",
-            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\shooterutils.h"
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\shooterutils.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\source\\shooter\\public\\player\\shooterplayerstate.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\playerstate.generated.h",
+            "c:\\mywork\\unrealprojects\\shooter 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shooterplayerstate.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -54,6 +54,9 @@
     <ClCompile Include="..\..\Source\Shooter\Private\GM_Shooter.cpp">
       <Filter>Source\Shooter\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\ShooterGameInstance.cpp">
+      <Filter>Source\Shooter\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\AI">
       <UniqueIdentifier>{A09CDA1E-10FB-380B-939B-B874B570B042}</UniqueIdentifier>
     </Filter>
@@ -90,6 +93,24 @@
     <ClCompile Include="..\..\Source\Shooter\Private\AI\NPCPerceptionComponent.cpp">
       <Filter>Source\Shooter\Private\AI</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\Menu">
+      <UniqueIdentifier>{D70F161F-5930-3239-A59F-53B42A489ED5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Menu\GMMenu.cpp">
+      <Filter>Source\Shooter\Private\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Menu\LvlItemWidget.cpp">
+      <Filter>Source\Shooter\Private\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Menu\MenuHUD.cpp">
+      <Filter>Source\Shooter\Private\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Menu\MenuPlayerController.cpp">
+      <Filter>Source\Shooter\Private\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Menu\MenuWidget.cpp">
+      <Filter>Source\Shooter\Private\Menu</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\PickUps">
       <UniqueIdentifier>{21C702F6-5C33-32A2-8808-C8B132D8F458}</UniqueIdentifier>
     </Filter>
@@ -114,8 +135,23 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Player\HealthComponent.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\PlayerChar.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\Player\PlayerControllerShooter.cpp">
       <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\RespawnComponent.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\ShooterPlayerState.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\Sound">
+      <UniqueIdentifier>{71C8CFC0-2AD7-30A2-BF1A-C6D87B8BFF72}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Sound\SoundFuncLib.cpp">
+      <Filter>Source\Shooter\Private\Sound</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\UI">
       <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
@@ -123,7 +159,28 @@
     <ClCompile Include="..\..\Source\Shooter\Private\UI\DefaultHUD.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\GameDataWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\GameOverWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\GoToMenuWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\HealthBarWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\PauseWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\PlayerHUDWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\SpectatorWidget.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\StatisticWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon">
@@ -177,6 +234,9 @@
     <ClInclude Include="..\..\Source\Shooter\Public\ShooterCoreTypes.h">
       <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\ShooterGameInstance.h">
+      <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\ShooterUtils.h">
       <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
@@ -216,6 +276,24 @@
     <ClInclude Include="..\..\Source\Shooter\Public\AI\NPCPerceptionComponent.h">
       <Filter>Source\Shooter\Public\AI</Filter>
     </ClInclude>
+    <Filter Include="Source\Shooter\Public\Menu">
+      <UniqueIdentifier>{348557B8-F35E-3170-9132-E9AB436EC8E5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Menu\GMMenu.h">
+      <Filter>Source\Shooter\Public\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Menu\LvlItemWidget.h">
+      <Filter>Source\Shooter\Public\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Menu\MenuHUD.h">
+      <Filter>Source\Shooter\Public\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Menu\MenuPlayerController.h">
+      <Filter>Source\Shooter\Public\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Menu\MenuWidget.h">
+      <Filter>Source\Shooter\Public\Menu</Filter>
+    </ClInclude>
     <Filter Include="Source\Shooter\Public\PickUps">
       <UniqueIdentifier>{ED50AF48-D8F7-3B14-912B-54BDE3269997}</UniqueIdentifier>
     </Filter>
@@ -240,8 +318,23 @@
     <ClInclude Include="..\..\Source\Shooter\Public\Player\HealthComponent.h">
       <Filter>Source\Shooter\Public\Player</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\PlayerChar.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Player\PlayerControllerShooter.h">
       <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\RespawnComponent.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\ShooterPlayerState.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Sound">
+      <UniqueIdentifier>{16CF4A1E-5DE0-357F-B8A0-C6BABC52AD21}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Sound\SoundFuncLib.h">
+      <Filter>Source\Shooter\Public\Sound</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\UI">
       <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>
@@ -249,7 +342,28 @@
     <ClInclude Include="..\..\Source\Shooter\Public\UI\DefaultHUD.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\GameDataWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\GameOverWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\GoToMenuWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\HealthBarWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\PauseWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\PlayerHUDWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\SpectatorWidget.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\StatisticWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon">

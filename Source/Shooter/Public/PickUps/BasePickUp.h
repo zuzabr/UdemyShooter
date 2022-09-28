@@ -7,6 +7,7 @@
 #include "BasePickUp.generated.h"
 
 class USphereComponent;
+class USoundCue;
 
 UCLASS()
 class SHOOTER_API ABasePickUp : public AActor
@@ -27,6 +28,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PickupInfo")
 		float RespawnTime = 5.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+		USoundCue* PickupSound;
 
 	
 //------------------------Variables------------------------	

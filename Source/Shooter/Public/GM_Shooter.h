@@ -4,17 +4,67 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "ShooterCoreTypes.h"
 #include "GM_Shooter.generated.h"
 
-/**
- *
- */
+class AAIController;
+
 UCLASS()
 class SHOOTER_API AGM_Shooter : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AGM_Shooter(); // Конструктор
+	AGM_Shooter(); 
+
+	FOnMatchStateChangedSignature OnMatchStateChanged; // Объявление делегата (См CoreTypes)
+	virtual void StartPlay() override;
+	virtual UClass* GetDefaultPawnClassForController_Implementation(AController* InController) override;
+	
+	void Killed(AController* KillerController, AController* VictimController);
+
+	FGameData GetGameData() const { return GameData; }
+	int32 GetCurrentRoundNum() const { return CurrentRound; }
+	int32 GetRoundSecondsRemain() const { return RoundCountDown; }
+
+	void RespawnRequest(AController* Controller);
+
+	virtual bool SetPause(APlayerController* PC, FCanUnpause CanUnpauseDelegate = FCanUnpause()) override;
+	virtual bool ClearPause() override;
+
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Game")
+		TSubclassOf<AAIController> AIControllerClass;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Game")
+		TSubclassOf<APawn> AIPawnClass;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Game")
+		FGameData GameData;
+
+private:
+	EMatchState MatchState = EMatchState::WaitingToStart;
+	int32 CurrentRound = 1;
+	int32 RoundCountDown = 0;
+	FTimerHandle GameRoundTimerHandle;
+
+	void SpawnBots();
+	void StartRound();
+	void GameTimerUpdate();
+
+	void ResetPlayers();
+	void ResetOnePlayer(AController* Controller);
+
+	void CreateTeamsInfo();
+	FLinearColor DetermineColorByTeamID(int32 TeamID) const;
+	void SetPlayerColor(AController* Controller);
+
+	void LogPlayerInfo();
+	void StartRespawn(AController* Controller);
+
+	void GameOver();
+
+	void SetMatchState(EMatchState State);
+
 
 };

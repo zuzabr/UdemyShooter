@@ -6,11 +6,10 @@
 #include "GameFramework/Character.h"
 #include "DefaultChar.generated.h"
 
-class UCameraComponent;
-class USpringArmComponent;
+
 class UHealthComponent;
-class UTextRenderComponent;
 class UWeaponComponent;
+class USoundCue;
 
 
 UCLASS()// Создается класс анреала
@@ -21,25 +20,21 @@ class SHOOTER_API ADefaultChar : public ACharacter // класс проект_API А - актор
 public:
 	ADefaultChar(const FObjectInitializer& ObjectInit);
 
+
+
 protected:
 	
 	virtual void BeginPlay() override;
 	virtual void OnDeath();
+	virtual void OnHealthChanged(float Health);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		UCameraComponent* CameraComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		USpringArmComponent* SpringArmComponent;
+	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UHealthComponent* HealthComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UWeaponComponent* WeaponComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		UTextRenderComponent* HealthTextComponent;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Animations")
 		UAnimMontage* DeathAnimMontage;
@@ -50,35 +45,35 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Movement")
 		FVector2D LandedDamage = FVector2D(10.0f, 100.0f);
 
+	UPROPERTY(EditDefaultsOnly, Category = "Material")
+		FName MaterialColorName = "BodyColor";
+
+	UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "Sound")
+		USoundCue* DeathSound;
 	
 
 public:	
 	
 	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-		bool IsSprinting() const;
+		virtual bool IsSprinting() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 		float GetMovementDirection() const;
 
 	UHealthComponent* GetHealth(APawn* PlayerPawn) const;
 
+	void SetPlayerColor(const FLinearColor& Color);
+
 private:
 
-	bool bRun = false;
-	bool bMoveForward = false;
 
-	void MoveForward(float Scale);
-	void MoveRight(float Scale);
-
-	void SprintOn();
-	void SprintOff();
 
 	
-	void OnHealthChanged(float Health);
-	void HomeWork();
+	
+	
 
 	UFUNCTION()
 		void OnGroundLanded(const FHitResult& Hit);

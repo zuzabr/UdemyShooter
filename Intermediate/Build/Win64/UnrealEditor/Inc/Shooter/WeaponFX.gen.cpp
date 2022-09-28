@@ -62,8 +62,8 @@ void EmptyLinkFunctionForGeneratedCodeWeaponFX() {}
 		{ "ModuleRelativePath", "Public/Weapon/Effects/WeaponFX.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData = { "DefaultImpactData", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponFX, DefaultImpactData), Z_Construct_UScriptStruct_FImpactlData, METADATA_PARAMS(Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData_MetaData)) }; // 642948408
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_ValueProp = { "ImpactDataMap", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FImpactlData, METADATA_PARAMS(nullptr, 0) }; // 642948408
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData = { "DefaultImpactData", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponFX, DefaultImpactData), Z_Construct_UScriptStruct_FImpactlData, METADATA_PARAMS(Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData_MetaData)) }; // 2926053325
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_ValueProp = { "ImpactDataMap", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UScriptStruct_FImpactlData, METADATA_PARAMS(nullptr, 0) }; // 2926053325
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_Key_KeyProp = { "ImpactDataMap_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UPhysicalMaterial_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_MetaData[] = {
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponFX() {}
 		{ "ModuleRelativePath", "Public/Weapon/Effects/WeaponFX.h" },
 	};
 #endif
-	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap = { "ImpactDataMap", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponFX, ImpactDataMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_MetaData)) }; // 642948408
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap = { "ImpactDataMap", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponFX, ImpactDataMap), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_MetaData)) }; // 2926053325
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWeaponFX_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponFX_Statics::NewProp_DefaultImpactData,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponFX_Statics::NewProp_ImpactDataMap_ValueProp,
@@ -114,9 +114,9 @@ void EmptyLinkFunctionForGeneratedCodeWeaponFX() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_Effects_WeaponFX_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UWeaponFX, UWeaponFX::StaticClass, TEXT("UWeaponFX"), &Z_Registration_Info_UClass_UWeaponFX, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponFX), 3903437972U) },
+		{ Z_Construct_UClass_UWeaponFX, UWeaponFX::StaticClass, TEXT("UWeaponFX"), &Z_Registration_Info_UClass_UWeaponFX, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponFX), 2994007013U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_Effects_WeaponFX_h_3630779690(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_Effects_WeaponFX_h_1126477584(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_Effects_WeaponFX_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_Effects_WeaponFX_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

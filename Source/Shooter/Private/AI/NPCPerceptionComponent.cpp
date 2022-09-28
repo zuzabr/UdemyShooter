@@ -5,14 +5,21 @@
 #include "AI/NPCController.h"
 #include "Player/HealthComponent.h"
 #include"Perception/AISense_Sight.h"
+#include"Perception/AISense_Damage.h"
 #include "Player/DefaultChar.h"
+#include "ShooterUtils.h"
+
 
 AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 {
 	TArray<AActor*> PercieveActors;
 	GetCurrentlyPerceivedActors(UAISense_Sight::StaticClass(), PercieveActors);
-	if (PercieveActors.Num() == 0) return nullptr;
-
+	if (PercieveActors.Num() == 0)
+	{
+		GetCurrentlyPerceivedActors(UAISense_Damage::StaticClass(), PercieveActors);
+		if (PercieveActors.Num() == 0) return nullptr;
+	}
+		
 	const auto Controller = Cast<AAIController>(GetOwner());
 	if (!Controller) return nullptr;
 
@@ -27,12 +34,12 @@ AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 
 	for (const auto  PercieveActor : PercieveActors)
 	{
-		const auto Enemy = Cast<ADefaultChar>(PercieveActor);
-		if (Enemy)
-		{
-			
-			const auto HealthComponent = Enemy->GetHealth(Enemy);
-			if (HealthComponent && !(HealthComponent->IsDead()))
+		
+		const auto HealthComponent = ShooterUtils::GetPlayerComponent<UHealthComponent>(PercieveActor);
+		const auto PercievePawn = Cast<APawn>(PercieveActor);
+		const auto AreEnemies = PercievePawn && ShooterUtils::AreEnemies(Controller, PercievePawn->Controller);
+
+			if (HealthComponent && !(HealthComponent->IsDead()) && AreEnemies)
 			{
 				
 				const auto CurrentDistanse = (PercieveActor->GetActorLocation() - ThisPawn->GetActorLocation()).Size();
@@ -43,7 +50,7 @@ AActor* UNPCPerceptionComponent::GetClosestEnemy() const
 					
 				}
 			}
-		}
+		
 	}
 
 	return BestPawn;

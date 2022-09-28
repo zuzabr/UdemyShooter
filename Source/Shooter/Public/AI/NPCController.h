@@ -8,6 +8,7 @@
 
 
 class UNPCPerceptionComponent;
+class URespawnComponent;
 
 UCLASS()
 class SHOOTER_API ANPCController : public AAIController
@@ -24,8 +25,11 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 		UNPCPerceptionComponent* NPCPerceptionComponent;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+		URespawnComponent* RespawnComponent;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-		FName FocusOnKeyName = "EnemyActor";
+		FName FocusOnKeyName = "Enemy"; // The Name must be equal to blackboard value in UE
 
 private:
 	AActor* GetFocusOnActor() const;

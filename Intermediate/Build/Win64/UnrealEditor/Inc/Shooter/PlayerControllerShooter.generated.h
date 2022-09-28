@@ -36,7 +36,7 @@ public: \
 
 #define FID_Shooter_5_0_Source_Shooter_Public_Player_PlayerControllerShooter_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APlayerControllerShooter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API APlayerControllerShooter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerControllerShooter) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APlayerControllerShooter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerControllerShooter); \
@@ -48,8 +48,6 @@ public:
 
 
 #define FID_Shooter_5_0_Source_Shooter_Public_Player_PlayerControllerShooter_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APlayerControllerShooter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerControllerShooter(APlayerControllerShooter&&); \
@@ -57,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APlayerControllerShooter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerControllerShooter); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerControllerShooter)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerControllerShooter)
 
 
 #define FID_Shooter_5_0_Source_Shooter_Public_Player_PlayerControllerShooter_h_12_PROLOG

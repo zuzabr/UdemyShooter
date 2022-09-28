@@ -20,8 +20,13 @@ void EmptyLinkFunctionForGeneratedCodeShooterCoreTypes() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FImpactlData();
 	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundCue_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponUIData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FGameData();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
+	SHOOTER_API UEnum* Z_Construct_UEnum_Shooter_EMatchState();
+	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FLevelData();
 // End Cross Module References
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AmmoData;
 class UScriptStruct* FAmmoData::StaticStruct()
@@ -329,6 +334,10 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FImpactlData>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DecalData_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_DecalData;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Sound_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Sound;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -356,9 +365,17 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FImpactlData>()
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData = { "DecalData", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactlData, DecalData), Z_Construct_UScriptStruct_FDecalData, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData_MetaData)) }; // 2694734361
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound = { "Sound", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactlData, Sound), Z_Construct_UClass_USoundCue_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FImpactlData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_NiagaraEffect,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_DecalData,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactlData_Statics::NewProp_Sound,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FImpactlData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
@@ -462,19 +479,317 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FWeaponUIData>()
 		}
 		return Z_Registration_Info_UScriptStruct_WeaponUIData.InnerSingleton;
 	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GameData;
+class UScriptStruct* FGameData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_GameData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_GameData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGameData, Z_Construct_UPackage__Script_Shooter(), TEXT("GameData"));
+	}
+	return Z_Registration_Info_UScriptStruct_GameData.OuterSingleton;
+}
+template<> SHOOTER_API UScriptStruct* StaticStruct<FGameData>()
+{
+	return FGameData::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FGameData_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_PlayersNum_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_PlayersNum;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RoundNum_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_RoundNum;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RoundTime_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_RoundTime;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DefaultTeamColor_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DefaultTeamColor;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_TeamColors_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TeamColors_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_TeamColors;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RespawnTime_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_RespawnTime;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Comment", "//--------------------GameMode---------------------\n" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+		{ "ToolTip", "--------------------GameMode---------------------" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FGameData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGameData>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_PlayersNum_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "1" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_PlayersNum = { "PlayersNum", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, PlayersNum), METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_PlayersNum_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_PlayersNum_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundNum_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "1" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundNum = { "RoundNum", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, RoundNum), METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundNum_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundNum_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundTime_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ClampMax", "100" },
+		{ "ClampMin", "3" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundTime = { "RoundTime", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, RoundTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundTime_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_DefaultTeamColor_MetaData[] = {
+		{ "Category", "GameData" },
+		{ "Comment", "//In Seconds\n" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+		{ "ToolTip", "In Seconds" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_DefaultTeamColor = { "DefaultTeamColor", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, DefaultTeamColor), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_DefaultTeamColor_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_DefaultTeamColor_MetaData)) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors_Inner = { "TeamColors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors_MetaData[] = {
+		{ "Category", "GameData" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors = { "TeamColors", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, TeamColors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RespawnTime_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ClampMax", "20" },
+		{ "ClampMin", "3" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RespawnTime = { "RespawnTime", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGameData, RespawnTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RespawnTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RespawnTime_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FGameData_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_PlayersNum,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundNum,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RoundTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_DefaultTeamColor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_TeamColors,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameData_Statics::NewProp_RespawnTime,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		&NewStructOps,
+		"GameData",
+		sizeof(FGameData),
+		alignof(FGameData),
+		Z_Construct_UScriptStruct_FGameData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FGameData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGameData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FGameData()
+	{
+		if (!Z_Registration_Info_UScriptStruct_GameData.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GameData.InnerSingleton, Z_Construct_UScriptStruct_FGameData_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_GameData.InnerSingleton;
+	}
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EMatchState;
+	static UEnum* EMatchState_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_EMatchState.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_EMatchState.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Shooter_EMatchState, Z_Construct_UPackage__Script_Shooter(), TEXT("EMatchState"));
+		}
+		return Z_Registration_Info_UEnum_EMatchState.OuterSingleton;
+	}
+	template<> SHOOTER_API UEnum* StaticEnum<EMatchState>()
+	{
+		return EMatchState_StaticEnum();
+	}
+	struct Z_Construct_UEnum_Shooter_EMatchState_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators[] = {
+		{ "EMatchState::WaitingToStart", (int64)EMatchState::WaitingToStart },
+		{ "EMatchState::InProgress", (int64)EMatchState::InProgress },
+		{ "EMatchState::Pause", (int64)EMatchState::Pause },
+		{ "EMatchState::GameOver", (int64)EMatchState::GameOver },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "GameOver.Name", "EMatchState::GameOver" },
+		{ "InProgress.Name", "EMatchState::InProgress" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+		{ "Pause.Name", "EMatchState::Pause" },
+		{ "WaitingToStart.Name", "EMatchState::WaitingToStart" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Shooter_EMatchState_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		"EMatchState",
+		"EMatchState",
+		Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enumerators),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UEnum_Shooter_EMatchState_Statics::Enum_MetaDataParams))
+	};
+	UEnum* Z_Construct_UEnum_Shooter_EMatchState()
+	{
+		if (!Z_Registration_Info_UEnum_EMatchState.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EMatchState.InnerSingleton, Z_Construct_UEnum_Shooter_EMatchState_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_EMatchState.InnerSingleton;
+	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_LevelData;
+class UScriptStruct* FLevelData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_LevelData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_LevelData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FLevelData, Z_Construct_UPackage__Script_Shooter(), TEXT("LevelData"));
+	}
+	return Z_Registration_Info_UScriptStruct_LevelData.OuterSingleton;
+}
+template<> SHOOTER_API UScriptStruct* StaticStruct<FLevelData>()
+{
+	return FLevelData::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FLevelData_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LevelName_MetaData[];
+#endif
+		static const UECodeGen_Private::FNamePropertyParams NewProp_LevelName;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LevelDisplayName_MetaData[];
+#endif
+		static const UECodeGen_Private::FNamePropertyParams NewProp_LevelDisplayName;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LevelThumb_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_LevelThumb;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Comment", "//--------------------GameMode---------------------\n" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+		{ "ToolTip", "--------------------GameMode---------------------" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FLevelData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLevelData>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelName_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelName = { "LevelName", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLevelData, LevelName), METADATA_PARAMS(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelName_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelDisplayName_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelDisplayName = { "LevelDisplayName", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLevelData, LevelDisplayName), METADATA_PARAMS(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelDisplayName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelDisplayName_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelThumb_MetaData[] = {
+		{ "Category", "Game" },
+		{ "ModuleRelativePath", "Public/ShooterCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelThumb = { "LevelThumb", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FLevelData, LevelThumb), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelThumb_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelThumb_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLevelData_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelName,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelDisplayName,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLevelData_Statics::NewProp_LevelThumb,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLevelData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		&NewStructOps,
+		"LevelData",
+		sizeof(FLevelData),
+		alignof(FLevelData),
+		Z_Construct_UScriptStruct_FLevelData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FLevelData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLevelData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FLevelData()
+	{
+		if (!Z_Registration_Info_UScriptStruct_LevelData.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_LevelData.InnerSingleton, Z_Construct_UScriptStruct_FLevelData_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_LevelData.InnerSingleton;
+	}
 	struct Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics
 	{
+		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
+	};
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo[] = {
+		{ EMatchState_StaticEnum, TEXT("EMatchState"), &Z_Registration_Info_UEnum_EMatchState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4228247019U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo[] = {
 		{ FAmmoData::StaticStruct, Z_Construct_UScriptStruct_FAmmoData_Statics::NewStructOps, TEXT("AmmoData"), &Z_Registration_Info_UScriptStruct_AmmoData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmmoData), 2012568362U) },
 		{ FWeaponData::StaticStruct, Z_Construct_UScriptStruct_FWeaponData_Statics::NewStructOps, TEXT("WeaponData"), &Z_Registration_Info_UScriptStruct_WeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponData), 1452695389U) },
 		{ FDecalData::StaticStruct, Z_Construct_UScriptStruct_FDecalData_Statics::NewStructOps, TEXT("DecalData"), &Z_Registration_Info_UScriptStruct_DecalData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDecalData), 2694734361U) },
-		{ FImpactlData::StaticStruct, Z_Construct_UScriptStruct_FImpactlData_Statics::NewStructOps, TEXT("ImpactlData"), &Z_Registration_Info_UScriptStruct_ImpactlData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FImpactlData), 642948408U) },
+		{ FImpactlData::StaticStruct, Z_Construct_UScriptStruct_FImpactlData_Statics::NewStructOps, TEXT("ImpactlData"), &Z_Registration_Info_UScriptStruct_ImpactlData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FImpactlData), 2926053325U) },
 		{ FWeaponUIData::StaticStruct, Z_Construct_UScriptStruct_FWeaponUIData_Statics::NewStructOps, TEXT("WeaponUIData"), &Z_Registration_Info_UScriptStruct_WeaponUIData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponUIData), 2823947487U) },
+		{ FGameData::StaticStruct, Z_Construct_UScriptStruct_FGameData_Statics::NewStructOps, TEXT("GameData"), &Z_Registration_Info_UScriptStruct_GameData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameData), 1238543316U) },
+		{ FLevelData::StaticStruct, Z_Construct_UScriptStruct_FLevelData_Statics::NewStructOps, TEXT("LevelData"), &Z_Registration_Info_UScriptStruct_LevelData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLevelData), 4218461971U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_3175036852(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_1759364111(TEXT("/Script/Shooter"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::ScriptStructInfo),
-		nullptr, 0);
+		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_ShooterCoreTypes_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

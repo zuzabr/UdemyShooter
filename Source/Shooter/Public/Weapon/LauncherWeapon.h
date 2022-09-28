@@ -8,6 +8,7 @@
 #include "LauncherWeapon.generated.h"
 
 class ARocketProjectile;
+class USoundCue;
 
 UCLASS()
 class SHOOTER_API ALauncherWeapon : public ABaseWeapon
@@ -20,6 +21,9 @@ public:
 protected:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
         TSubclassOf<ARocketProjectile> ProjectileClass;
+
+    UPROPERTY(EditdefaultsOnly, BlueprintReadWrite, Category = "Sound")
+        USoundCue* NoAmmoSound;
 
    
     virtual void MakeShot() override;

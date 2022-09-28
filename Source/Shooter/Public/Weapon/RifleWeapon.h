@@ -8,6 +8,7 @@
 
 class UWeaponFX;
 class UNiagaraComponent;
+class UAudioComponent;
 
 UCLASS()
 class SHOOTER_API ARifleWeapon : public ABaseWeapon
@@ -20,6 +21,8 @@ public:
 	ARifleWeapon();
 	virtual void StartFire() override;
 	virtual void StopFire() override;
+
+	virtual void Zoom(bool Enabled) override; 
 	
 	
 protected:
@@ -36,6 +39,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "VFX")
 		UWeaponFX* WeaponFXComponent;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "WeaponInfo")
+		float FOVZoomAngle = 50.0f;
+
 	virtual void BeginPlay() override;
 	virtual void MakeShot() override;
 	virtual bool GetTraceData(FVector& TraceStart, FVector& TraceEnd) const override;
@@ -46,9 +52,14 @@ private:
 	UPROPERTY()
 		UNiagaraComponent* MuzzleFXComponent;
 
+	UPROPERTY()
+	UAudioComponent* FireAudioComponent;
+
 	void MakeDamage(const FHitResult& HitResult);
-	void InitMuzzleFX();
-	void SetMuzzleFXVisibility(bool Visible);
+	void InitFX();
+	void SetFXActive(bool IsActive);
 	AController* GetController() const;
+
+	float DefaultCameraFOV = 90.0f;
 
 };

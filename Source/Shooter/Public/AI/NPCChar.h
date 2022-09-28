@@ -7,6 +7,7 @@
 #include "NPCChar.generated.h"
 
 class UBehaviorTree;
+class UWidgetComponent;
 
 UCLASS()
 class SHOOTER_API ANPCChar : public ADefaultChar
@@ -19,6 +20,18 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI")
 		UBehaviorTree* BehaviorTreeAsset;
 
+	
+
 protected:
 	virtual void OnDeath() override;
+	virtual void BeginPlay() override;
+	virtual void OnHealthChanged(float Health) override;
+
+	
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+		UWidgetComponent* HealthWidgetComponent;
+
+
+	
 };

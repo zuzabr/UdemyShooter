@@ -2,14 +2,16 @@
 
 
 #include "Player/HealthComponent.h"
-#include "GameFramework/Actor.h"
-#include "GameFramework/Pawn.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/Controller.h"
 #include "Engine/World.h"
 #include "TimerManager.h"
 #include "Camera/CameraShakeBase.h"
 #include "GameFramework/Character.h"
 #include "Animation/AnimMontage.h"
+#include "GM_Shooter.h"
+#include"Perception/AISense_Damage.h"
 
 
 DEFINE_LOG_CATEGORY_STATIC(HealthComponent, All, All);
@@ -33,12 +35,29 @@ void UHealthComponent::BeginPlay()
 	if (ComponentOwner)
 	{
 		ComponentOwner->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::OnTakeAnyDamageHAndle);
+		ComponentOwner->OnTakePointDamage.AddDynamic(this, &UHealthComponent::OnTakePointDamage);
+		ComponentOwner->OnTakeRadialDamage.AddDynamic(this, &UHealthComponent::OnTakeRadialDamage);
 	}
 }
 
-void UHealthComponent::OnTakeAnyDamageHAndle(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
+void UHealthComponent::OnTakePointDamage(
+	AActor* DamagedActor, float Damage, class AController* InstigatedBy, FVector HitLocation,
+	class UPrimitiveComponent* FHitComponent, FName BoneName, FVector ShotFromDirection,
+	const class UDamageType* DamageType, AActor* DamageCauser)
 {
-	
+	const auto FinalDamage = Damage * GetPointDamageModifier(DamagedActor, BoneName);
+	ApplyDamage(FinalDamage, InstigatedBy);
+}
+
+void UHealthComponent::OnTakeRadialDamage(
+	AActor* DamagedActor, float Damage, const class UDamageType* DamageType, FVector Origin, FHitResult HitInfo,
+	class AController* InstigatedBy, AActor* DamageCauser)
+{
+	ApplyDamage(Damage, InstigatedBy);
+}
+
+void UHealthComponent::ApplyDamage(float Damage, AController* InstigatedBy)
+{
 	if (Damage <= 0.0f || IsDead() || !GetWorld()) return;
 	//SetHealth(Health - Damage);
 	ChangeHealth(-Damage);
@@ -47,20 +66,25 @@ void UHealthComponent::OnTakeAnyDamageHAndle(AActor* DamagedActor, float Damage,
 
 	if (IsDead())
 	{
+		Killed(InstigatedBy);
 		OnDeath.Broadcast();
 	}
 	else if (AutoHeal)
 	{
 		GetWorld()->GetTimerManager().SetTimer(HealTimerHandle, this, &UHealthComponent::HealUpdate, HealUpdateTime, true, HealDelay);
 	}
-	
+
 	PlayCameraShake();
 
-	/*auto Character = Cast<ACharacter>(DamagedActor);
-	if (Character)
-	{
-		Character->PlayAnimMontage(DamageMontage);
-	}*/
+	ReportDamageEvent(Damage, InstigatedBy);
+}
+
+void UHealthComponent::OnTakeAnyDamageHAndle(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
+{
+	
+	
+
+	
 }
 
 void UHealthComponent::HealUpdate()
@@ -121,4 +145,35 @@ void UHealthComponent::PlayCameraShake()
 	if (!Controller || !Controller->PlayerCameraManager) return;
 
 	Controller->PlayerCameraManager->StartCameraShake(CameraShake);
+}
+
+void UHealthComponent::Killed(AController* KillerController)
+{
+	if (!GetWorld()) return;
+	const auto GameMode = Cast<AGM_Shooter>(GetWorld()->GetAuthGameMode());
+	if (!GameMode) return;
+
+	const auto Player = Cast<APawn>(GetOwner());
+	const auto VictimController = Player ? Player->Controller : nullptr;
+
+	GameMode->Killed(KillerController, VictimController);
+}
+
+float UHealthComponent::GetPointDamageModifier(AActor* DamagedActor, const FName& BoneName)
+{
+	const auto Character = Cast<ACharacter>(DamagedActor);
+	if (!Character
+		||!Character->GetMesh()
+		||!Character->GetMesh()->GetBodyInstance(BoneName)) return 1.0f;
+
+	const auto PhysMaterial = Character->GetMesh()->GetBodyInstance(BoneName)->GetSimplePhysicalMaterial();
+	if (!PhysMaterial || !DamageModifiers.Contains(PhysMaterial)) return 1.0f;
+
+	return DamageModifiers[PhysMaterial];
+}
+
+void UHealthComponent::ReportDamageEvent(float Damage, AController* InstigatedBy)
+{
+	if (!InstigatedBy || !InstigatedBy->GetPawn() || !GetOwner()) return;
+	UAISense_Damage::ReportDamageEvent(GetWorld(), GetOwner(), InstigatedBy->GetPawn(), Damage, InstigatedBy->GetPawn()->GetActorLocation(), GetOwner()->GetActorLocation());
 }
