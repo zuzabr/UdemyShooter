@@ -48,6 +48,10 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponFXComponent;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FOVZoomAngle_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_FOVZoomAngle;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MuzzleFXComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_MuzzleFXComponent;
@@ -99,6 +103,13 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARifleWeapon_Statics::NewProp_WeaponFXComponent = { "WeaponFXComponent", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARifleWeapon, WeaponFXComponent), Z_Construct_UClass_UWeaponFX_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_WeaponFXComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_WeaponFXComponent_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FOVZoomAngle_MetaData[] = {
+		{ "Category", "WeaponInfo" },
+		{ "ModuleRelativePath", "Public/Weapon/RifleWeapon.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FOVZoomAngle = { "FOVZoomAngle", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARifleWeapon, FOVZoomAngle), METADATA_PARAMS(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FOVZoomAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FOVZoomAngle_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Weapon/RifleWeapon.h" },
@@ -117,6 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_BulletSpread,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_Damage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_WeaponFXComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FOVZoomAngle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_MuzzleFXComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARifleWeapon_Statics::NewProp_FireAudioComponent,
 	};
@@ -156,9 +168,9 @@ void EmptyLinkFunctionForGeneratedCodeRifleWeapon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ARifleWeapon, ARifleWeapon::StaticClass, TEXT("ARifleWeapon"), &Z_Registration_Info_UClass_ARifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARifleWeapon), 773426800U) },
+		{ Z_Construct_UClass_ARifleWeapon, ARifleWeapon::StaticClass, TEXT("ARifleWeapon"), &Z_Registration_Info_UClass_ARifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARifleWeapon), 2312098256U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_1199633974(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_799842408(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0_Source_Shooter_Public_Weapon_RifleWeapon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

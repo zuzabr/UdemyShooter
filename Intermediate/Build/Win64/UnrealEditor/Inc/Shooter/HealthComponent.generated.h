@@ -10,28 +10,34 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class UDamageType;
+struct FHitResult;
 class AController;
+class UPrimitiveComponent;
 #ifdef SHOOTER_HealthComponent_generated_h
 #error "HealthComponent.generated.h already included, missing '#pragma once' in HealthComponent.h"
 #endif
 #define SHOOTER_HealthComponent_generated_h
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_SPARSE_DATA
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnTakeRadialDamage); \
+	DECLARE_FUNCTION(execOnTakePointDamage); \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
 	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnTakeRadialDamage); \
+	DECLARE_FUNCTION(execOnTakePointDamage); \
 	DECLARE_FUNCTION(execOnTakeAnyDamageHAndle); \
 	DECLARE_FUNCTION(execGetHealthPercent); \
 	DECLARE_FUNCTION(execIsDead);
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHealthComponent(); \
 	friend struct Z_Construct_UClass_UHealthComponent_Statics; \
@@ -40,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(UHealthComponent)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesUHealthComponent(); \
 	friend struct Z_Construct_UClass_UHealthComponent_Statics; \
@@ -49,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(UHealthComponent)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_STANDARD_CONSTRUCTORS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHealthComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UHealthComponent) \
@@ -62,7 +68,7 @@ private: \
 public:
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UHealthComponent(UHealthComponent&&); \
@@ -73,25 +79,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UHealthComponent)
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_14_PROLOG
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_GENERATED_BODY_LEGACY \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_15_PROLOG
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_STANDARD_CONSTRUCTORS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_SPARSE_DATA \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_RPC_WRAPPERS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_INCLASS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_GENERATED_BODY \
+#define FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_SPARSE_DATA \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_SPARSE_DATA \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Shooter_5_0_Source_Shooter_Public_Player_HealthComponent_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

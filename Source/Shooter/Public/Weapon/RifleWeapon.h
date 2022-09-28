@@ -21,6 +21,8 @@ public:
 	ARifleWeapon();
 	virtual void StartFire() override;
 	virtual void StopFire() override;
+
+	virtual void Zoom(bool Enabled) override; 
 	
 	
 protected:
@@ -36,6 +38,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "VFX")
 		UWeaponFX* WeaponFXComponent;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "WeaponInfo")
+		float FOVZoomAngle = 50.0f;
 
 	virtual void BeginPlay() override;
 	virtual void MakeShot() override;
@@ -54,5 +59,7 @@ private:
 	void InitFX();
 	void SetFXActive(bool IsActive);
 	AController* GetController() const;
+
+	float DefaultCameraFOV = 90.0f;
 
 };
